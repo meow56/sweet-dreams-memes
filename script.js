@@ -62,4 +62,7 @@ function setup() {
     }
   }
   svg.viewbox = "0 0 " + (document.getElementById("mainDiv").width - xOffset) + " " + ((highGen + 1) * genY);
+  for(var i = 0; i < highGen; i++) {
+    // create SVG elements
+  }
 }
