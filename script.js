@@ -14,7 +14,7 @@ var genY = 100; // height difference between generations
 
 function owo() {
   if(!!document.getElementsByTagName("body")) {
-    owo();
+    setTimeout(1000, owo);
   }
 var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
