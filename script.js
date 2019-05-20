@@ -24,14 +24,14 @@ var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle")
     newCircle.setAttributeNS(null, "cx", "50");
     newCircle.setAttributeNS(null, "cy", "50");
 svg.appendChild(newCircle);
-var newLine = document.createElementNS(null, "line");
+var newLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
 newLine.setAttributeNS(null, "x1", "0");
 newLine.setAttributeNS(null, "y1", "20");
 newLine.setAttributeNS(null, "x2", "100");
 newLine.setAttributeNS(null, "y2", "80");
 newLine.setAttributeNS(null, "stroke", "black");
 svg.appendChild(newLine);
-document.getElementsByTagName("body")[0].appendChild(svg);
+document.getElementById("mainDiv").appendChild(svg);
   }
 }
 
