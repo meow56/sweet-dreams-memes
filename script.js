@@ -13,6 +13,9 @@ var yOffset = 10; // how far down the first node is
 var genY = 100; // height difference between generations
 
 function owo() {
+  if(!document.getElementsByTagName("body")) {
+    owo();
+  }
 var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 svg.appendChild(newCircle);
