@@ -22,7 +22,7 @@ newLine.setAttributeNS(null, "x2", 100);
 newLine.setAttributeNS(null, "y2", 80);
 newLine.setAttributeNS(null, "stroke", "black");
 svg.appendChild(newLine);
-document.getElementByType("body").appendChild(svg);
+document.getElementByTagName("body")[0].appendChild(svg);
 
 function Tree(nodes) {
   this.nodes = nodes;
