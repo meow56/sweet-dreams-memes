@@ -15,7 +15,7 @@ var genY = 100; // height difference between generations
 function owo() {
   if(!!document.getElementsByTagName("body")) {
     setTimeout(1000, owo);
-  }
+  } else {
 var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 svg.appendChild(newCircle);
@@ -27,6 +27,7 @@ newLine.setAttributeNS(null, "y2", 80);
 newLine.setAttributeNS(null, "stroke", "black");
 svg.appendChild(newLine);
 document.getElementsByTagName("body")[0].appendChild(svg);
+  }
 }
 
 function Tree(nodes) {
