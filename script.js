@@ -12,6 +12,18 @@ var xOffset = 10; // how far to the right the first node is
 var yOffset = 10; // how far down the first node is
 var genY = 100; // height difference between generations
 
+var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+svg.appendChild(newCircle);
+var newLine = document.createElementNS(null, "line");
+newLine.setAttributeNS(null, "x1", 0);
+newLine.setAttributeNS(null, "y1", 20);
+newLine.setAttributeNS(null, "x2", 100);
+newLine.setAttributeNS(null, "y2", 80);
+newLine.setAttributeNS(null, "stroke", "black");
+svg.appendChild(newLine);
+document.getElementByType("body").appendChild(svg);
+
 function Tree(nodes) {
   this.nodes = nodes;
   this.display = function() {
