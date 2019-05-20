@@ -31,7 +31,7 @@ newLine.setAttributeNS(null, "x2", "100");
 newLine.setAttributeNS(null, "y2", "80");
 newLine.setAttributeNS(null, "stroke", "black");
 svg.appendChild(newLine);
-document.getElementById("mainDiv").appendChild(svg);
+return document.getElementById("mainDiv").appendChild(svg);
   }
 }
 
