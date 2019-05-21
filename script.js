@@ -71,21 +71,21 @@ function Node(metadata, official) {
     newCircle.setAttributeNS(null, "r", "" + nodeRadius);
     newCircle.setAttributeNS(null, "cx", "" + this.x);
     newCircle.setAttributeNS(null, "cy", "" + this.y);
-    newCircle.addEventListener("mouseover", function() {
-      var newTri = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-      newTri.setAttributeNS(null, "points", (this.x + nodeRadius + 5) + "," + this.y + " " + (this.x + nodeRadius + 5 + 20) + "," + this.y + " " + (this.x + nodeRadius + 5 + 20) + "," + (this.y + 20));
-      newTri.setAttributeNS(null, "fill", "white");
-      newTri.setAttributeNS(null, "stroke", "black"); // change to none when backgrounds implemented
+    newCircle.addEventListener("mouseover", new Function("
+      var newTri = document.createElementNS(\"http://www.w3.org/2000/svg\", \"polygon\");
+      newTri.setAttributeNS(null, \"points\", (" + this.x + " + nodeRadius + 5) + \",\" + " + this.y + " + \" \" + (" + this.x + " + nodeRadius + 5 + 20) + \",\" + " + this.y + " + \" \" + (" + this.x + " + nodeRadius + 5 + 20) + \",\" + (" + this.y + " + 20));
+      newTri.setAttributeNS(null, \"fill\", \"white\");
+      newTri.setAttributeNS(null, \"stroke\", \"black\"); // change to none when backgrounds implemented
       svg.appendChild(newTri);
-      var newRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-      newRect.setAttributeNS(null, "x", "" + (this.x + nodeRadius + 5 + 20));
-      newRect.setAttributeNS(null, "y", "" + this.y);
-      newRect.setAttributeNS(null, "height", "100");
-      newRect.setAttributeNS(null, "width", "200");
-      newRect.setAttributeNS(null, "fill", "white");
-      newRect.setAttributeNS(null, "stroke", "black"); // change to none when background implemented
+      var newRect = document.createElementNS(\"http://www.w3.org/2000/svg\", \"rect\");
+      newRect.setAttributeNS(null, \"x\", \"\" + (" + this.x + " + nodeRadius + 5 + 20));
+      newRect.setAttributeNS(null, \"y\", \"\" + " + this.y + ");
+      newRect.setAttributeNS(null, \"height\", \"100\");
+      newRect.setAttributeNS(null, \"width\", \"200\");
+      newRect.setAttributeNS(null, \"fill\", \"white\");
+      newRect.setAttributeNS(null, \"stroke\", \"black\"); // change to none when background implemented
       svg.appendChild(newRect);
-    });
+    ");
     svg.appendChild(newCircle);
   }
 }
