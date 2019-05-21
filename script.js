@@ -104,7 +104,7 @@ function setup() {
       var newLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
       newLine.setAttributeNS(null, "x1", "0");
       newLine.setAttributeNS(null, "y1", "" + (i * genY));
-      newLine.setAttributeNS(null, "x2", "" + svg.width - (2 * nodeRadius));
+      newLine.setAttributeNS(null, "x2", "" + svg.offsetWidth - (2 * nodeRadius));
       newLine.setAttributeNS(null, "y2", "" + (i * genY));
       newLine.setAttributeNS(null, "stroke", "grey");
       svg.appendChild(newLine);
