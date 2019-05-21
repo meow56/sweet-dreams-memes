@@ -72,40 +72,44 @@ function Node(metadata, official) {
 }
 
 function setup() {
-  
-  mainTree = new Tree([new Node({name: "owo", 
-                                 date: "05/20/40", 
-                                 desc: "When the world is ravaged by furries, the only savior of humanity will be one of those cat spritzers.", 
-                                 link: "sdfsdf"}),
-                       new Node({name: "strongeset",
-                                 date: "09/09/09",
-                                 desc: "EYE'M THA STRONGESET!!!",
-                                 link: "fjofojfojF"})
-                      ]); // please ACTUALLY define mainTree here once everything works
-  
-  mainTree.nodes[1].par = mainTree.nodes[0];
-  for(var i = 0; i < mainTree.nodes.length; i++) {
-    mainTree.nodes[i].gen = mainTree.nodes[i].par ? (mainTree.nodes[i].par.gen + 1) : 0;
-  }
-  
-  var highGen = 0;
-  for(var i = 0; i < mainTree.nodes.length; i++) {
-    if(mainTree.nodes[i].gen > highGen) {
-      highGen = mainTree.nodes[i].gen;
+  if(!document.getElementById("mainDiv")) {
+    setTimeout(setup, 1);
+  } else {
+    
+    mainTree = new Tree([new Node({name: "owo", 
+                                   date: "05/20/40", 
+                                   desc: "When the world is ravaged by furries, the only savior of humanity will be one of those cat spritzers.", 
+                                   link: "sdfsdf"}),
+                         new Node({name: "strongeset",
+                                   date: "09/09/09",
+                                   desc: "EYE'M THA STRONGESET!!!",
+                                   link: "fjofojfojF"})
+                        ]); // please ACTUALLY define mainTree here once everything works
+    
+    mainTree.nodes[1].par = mainTree.nodes[0];
+    for(var i = 0; i < mainTree.nodes.length; i++) {
+      mainTree.nodes[i].gen = mainTree.nodes[i].par ? (mainTree.nodes[i].par.gen + 1) : 0;
     }
-  }
-  var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.setAttributeNS(null, "width", "" + (document.getElementById("mainDiv").width - xOffset + 2 * nodeRadius));
-  svg.setAttributeNS(null, "height", "" + ((highGen + 2) * genY + 2 * nodeRadius));
-  for(var i = 0; i < highGen + 1; i++) {
-    var newLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
-    newLine.setAttributeNS(null, "x1", "0");
-    newLine.setAttributeNS(null, "y1", "" + (i * genY));
-    newLine.setAttributeNS(null, "x2", "" + svg.width - (2 * nodeRadius));
-    newLine.setAttributeNS(null, "y2", "" + (i * genY));
-    newLine.setAttributeNS(null, "stroke", "grey");
-    svg.appendChild(newLine);
-    // create SVG elements
+    
+    var highGen = 0;
+    for(var i = 0; i < mainTree.nodes.length; i++) {
+      if(mainTree.nodes[i].gen > highGen) {
+        highGen = mainTree.nodes[i].gen;
+      }
+    }
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttributeNS(null, "width", "" + (document.getElementById("mainDiv").width - xOffset + 2 * nodeRadius));
+    svg.setAttributeNS(null, "height", "" + ((highGen + 2) * genY + 2 * nodeRadius));
+    for(var i = 0; i < highGen + 1; i++) {
+      var newLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      newLine.setAttributeNS(null, "x1", "0");
+      newLine.setAttributeNS(null, "y1", "" + (i * genY));
+      newLine.setAttributeNS(null, "x2", "" + svg.width - (2 * nodeRadius));
+      newLine.setAttributeNS(null, "y2", "" + (i * genY));
+      newLine.setAttributeNS(null, "stroke", "grey");
+      svg.appendChild(newLine);
+      // create SVG elements
+    }
   }
 }
 
