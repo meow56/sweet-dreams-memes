@@ -63,7 +63,7 @@ function Node(metadata, official) {
           }
         }
       }
-      this.x = ((svg.getAttribute(null, "width") - xOffset) * position / (newNodes.length + 1)) + xOffset;
+      this.x = ((svg.getAttribute(null, "width") - xOffset) * (position + 1) / (newNodes.length + 1)) + xOffset;
     }
     this.y = yOffset + (genY * this.gen);
     var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
