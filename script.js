@@ -11,8 +11,9 @@ how do display
 var xOffset = 10; // how far to the right the first node is
 var yOffset = 10; // how far down the first node is
 var nodeRadius = 10; // the radius of each node, also used to determine the margins of the svg
-var genY = 100; // height difference between generations
+var genY = 200; // height difference between generations
 var mainTree;
+var svg;
 
 function owo() {
   if(!document.getElementById("mainDiv")) {
@@ -61,13 +62,12 @@ function Node(metadata, official) {
       this.x = ((document.getElementById("mainDiv").width - xOffset) * i / newNodes.length) + xOffset;
     }
     this.y = yOffset + (genY * this.gen);
-    /* Update to SVG later
-    var nodeDiv = document.createElement("div");
-    nodeDiv.id = this.meta.name;
-    nodeDiv.borderRadius = 50%;
-    nodeDiv.backgroundPosition = "left " + this.x + "px top " + this.y + "px";
-    document.getElementById("mainDiv").appendChild(nodeDiv);
-    */
+    var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    newCircle.setAttributeNS(null, "id", this.meta.name);
+    newCircle.setAttributeNS(null, "r", "" + nodeRadius);
+    newCircle.setAttributeNS(null, "cx", "" + this.x);
+    newCircle.setAttributeNS(null, "cy", "" + this.y);
+    svg.appendChild(newCircle);
   }
 }
 
@@ -97,7 +97,7 @@ function setup() {
         highGen = mainTree.nodes[i].gen;
       }
     }
-    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttributeNS(null, "width", "" + (document.getElementById("mainDiv").offsetWidth - xOffset + 2 * nodeRadius));
     svg.setAttributeNS(null, "height", "" + ((highGen + 2) * genY + 2 * nodeRadius));
     for(var i = 0; i < highGen + 1; i++) {
@@ -111,6 +111,8 @@ function setup() {
       // create SVG elements
     }
     document.getElementById("mainDiv").appendChild(svg);
+    
+    mainTree.display();
   }
 }
 
