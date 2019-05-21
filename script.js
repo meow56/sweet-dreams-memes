@@ -110,6 +110,7 @@ function setup() {
       svg.appendChild(newLine);
       // create SVG elements
     }
+    document.getElementById("mainDiv").appendChild(svg);
   }
 }
 
