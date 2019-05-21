@@ -14,7 +14,7 @@ var genY = 100; // height difference between generations
 
 function owo() {
   if(!document.getElementById("mainDiv")) {
-    setTimeout(1000, owo);
+    setTimeout(owo, 1000);
   } else {
 var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttributeNS(null, "width", "100");
@@ -90,4 +90,4 @@ function setup() {
   }
 }
 
-setTimeout(1000, owo);
+setTimeout(owo, 1000);
