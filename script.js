@@ -10,15 +10,13 @@ how do display
 
 var xOffset = 10; // how far to the right the first node is
 var yOffset = 10; // how far down the first node is
+var nodeRadius = 10; // the radius of each node, also used to determine the margins of the svg
 var genY = 100; // height difference between generations
 
 function owo() {
   if(!document.getElementById("mainDiv")) {
-    setTimeout(owo, 1000);
+    setTimeout(owo, 100);
   } else {
-var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttributeNS(null, "width", "100");
-    svg.setAttributeNS(null, "height", "100");
 var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     newCircle.setAttributeNS(null, "r", "10");
     newCircle.setAttributeNS(null, "cx", "50");
@@ -73,8 +71,6 @@ function Node(parent, metadata, official) {
 }
 
 function setup() {
-  var svg = document.createElement("svg");
-  svg.id = "mainSVG";
   
   // please define mainTree here
   
@@ -84,10 +80,19 @@ function setup() {
       highGen = mainTree.nodes[i].gen;
     }
   }
-  svg.viewbox = "0 0 " + (document.getElementById("mainDiv").width - xOffset) + " " + ((highGen + 1) * genY);
-  for(var i = 0; i < highGen; i++) {
+  var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttributeNS(null, "width", "" + (document.getElementById("mainDiv").width - xOffset + 2 * nodeRadius));
+  svg.setAttributeNS(null, "height", "" + ((highGen + 2) * genY + 2 * nodeRadius);
+  for(var i = 0; i < highGen + 1; i++) {
+    var newLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    newLine.setAttributeNS(null, "x1", "0");
+    newLine.setAttributeNS(null, "y1", "" + (i * genY));
+    newLine.setAttributeNS(null, "x2", "" + svg.width - (2 * nodeRadius));
+    newLine.setAttributeNS(null, "y2", "" + (i * genY));
+    newLine.setAttributeNS(null, "stroke", "grey");
+    svg.appendChild(newLine);
     // create SVG elements
   }
 }
 
-setTimeout(owo, 1000);
+owo();
