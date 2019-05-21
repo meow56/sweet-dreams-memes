@@ -54,12 +54,16 @@ function Node(metadata, official) {
       this.x = xOffset;
     } else {
       var newNodes = [];
+      var position;
       for(var j = 0; j < nodes.length; j++) {
         if(nodes[j].gen === this.gen) {
           newNodes.push(nodes[j]);
+          if(j === i) {
+            position = newNodes.length - 1;
+          }
         }
       }
-      this.x = ((document.getElementById("mainDiv").offsetWidth - xOffset) * i / newNodes.length) + xOffset;
+      this.x = ((svg.getAttribute(null, "width") - xOffset) * position / newNodes.length) + xOffset;
     }
     this.y = yOffset + (genY * this.gen);
     var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
