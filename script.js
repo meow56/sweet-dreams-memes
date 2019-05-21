@@ -12,6 +12,7 @@ var xOffset = 10; // how far to the right the first node is
 var yOffset = 10; // how far down the first node is
 var nodeRadius = 10; // the radius of each node, also used to determine the margins of the svg
 var genY = 100; // height difference between generations
+var mainTree;
 
 function owo() {
   if(!document.getElementById("mainDiv")) {
@@ -42,11 +43,11 @@ function Tree(nodes) {
   }
 }
 
-function Node(parent, metadata, official) {
-  this.par = parent;
+function Node(metadata, official) {
+  this.par;
   this.meta = metadata; // object that holds stuff like the name, date, description, link
   this.off = official || false;
-  this.gen = parent.gen ? parent.gen : 0;
+  this.gen;
   this.display = function(nodes, i) {
     if(this.off) {
       this.x = xOffset;
@@ -72,7 +73,20 @@ function Node(parent, metadata, official) {
 
 function setup() {
   
-  // please define mainTree here
+  mainTree = new Tree([new Node({name: "owo", 
+                                 date: "05/20/40", 
+                                 desc: "When the world is ravaged by furries, the only savior of humanity will be one of those cat spritzers.", 
+                                 link: "sdfsdf"}),
+                       new Node({name: "strongeset",
+                                 date: "09/09/09",
+                                 desc: "EYE'M THA STRONGESET!!!",
+                                 link: "fjofojfojF"})
+                      ]); // please ACTUALLY define mainTree here once everything works
+  
+  mainTree.nodes[1].par = mainTree.nodes[0];
+  for(var i = 0; i < mainTree.nodes.length; i++) {
+    mainTree.nodes[i].gen = mainTree.nodes[i].par ? (mainTree.nodes[i].par.gen + 1) : 0;
+  }
   
   var highGen = 0;
   for(var i = 0; i < mainTree.nodes.length; i++) {
@@ -82,7 +96,7 @@ function setup() {
   }
   var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttributeNS(null, "width", "" + (document.getElementById("mainDiv").width - xOffset + 2 * nodeRadius));
-  svg.setAttributeNS(null, "height", "" + ((highGen + 2) * genY + 2 * nodeRadius);
+  svg.setAttributeNS(null, "height", "" + ((highGen + 2) * genY + 2 * nodeRadius));
   for(var i = 0; i < highGen + 1; i++) {
     var newLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
     newLine.setAttributeNS(null, "x1", "0");
@@ -95,4 +109,4 @@ function setup() {
   }
 }
 
-owo();
+setup();
