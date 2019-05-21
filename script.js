@@ -98,7 +98,7 @@ function setup() {
       }
     }
     svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttributeNS(null, "width", "" + (document.getElementById("mainDiv").offsetWidth - xOffset + 2 * nodeRadius));
+    svg.setAttributeNS(null, "width", "" + (document.getElementById("mainDiv").offsetWidth + 2 * nodeRadius));
     svg.setAttributeNS(null, "height", "" + ((highGen + 2) * genY + 2 * nodeRadius));
     for(var i = 0; i < highGen + 1; i++) {
       var newLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
