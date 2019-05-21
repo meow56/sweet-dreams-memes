@@ -90,4 +90,4 @@ function setup() {
   }
 }
 
-owo();
+setTimeout(1000, owo);
