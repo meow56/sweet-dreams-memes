@@ -59,7 +59,7 @@ function Node(metadata, official) {
           newNodes.push(nodes[j]);
         }
       }
-      this.x = ((document.getElementById("mainDiv").width - xOffset) * i / newNodes.length) + xOffset;
+      this.x = ((document.getElementById("mainDiv").offsetWidth - xOffset) * i / newNodes.length) + xOffset;
     }
     this.y = yOffset + (genY * this.gen);
     var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
