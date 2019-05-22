@@ -108,13 +108,13 @@ function Node(metadata, official) {
       title.textContent = mainNode.meta.name;
       title.style.fontSize = "20px";
       newForeignObject.appendChild(title);
-      var byline = document.createElement("p");
+      var byline = document.createElement("div");
       byline.id = mainNode.meta.name + "hoverbyline";
       byline.xmlns = "http://www.w3.org/1999/xhtml";
       byline.textContent = "Created by " + mainNode.meta.by + ", on " + mainNode.meta.date;
       byline.style.fontSize = "10px";
       newForeignObject.appendChild(byline);
-      var desc = document.createElement("p");
+      var desc = document.createElement("div");
       desc.id = mainNode.meta.name + "hoverdesc";
       desc.xmlns = "http://www.w3.org/1999/xhtml";
       desc.textContent = mainNode.meta.desc;
@@ -135,6 +135,7 @@ function Node(metadata, official) {
       document.getElementById(mainNode.meta.name + "hovertitle").parentNode.removeChild(document.getElementById(mainNode.meta.name + "hovertitle"));
       document.getElementById(mainNode.meta.name + "hoverbyline").parentNode.removeChild(document.getElementById(mainNode.meta.name + "hoverbyline"));
       document.getElementById(mainNode.meta.name + "hoverdesc").parentNode.removeChild(document.getElementById(mainNode.meta.name + "hoverdesc"));
+      document.getElementById(mainNode.meta.name + "hoverforeignobject").parentNode.removeChild(document.getElementById(mainNode.meta.name + "hoverforeignobject"));
     }
     
     newCircle.addEventListener("mouseover", createInfoBox);
