@@ -75,16 +75,22 @@ function Node(metadata, official) {
     newCircle.setAttributeNS(null, "cy", "" + this.y);
     
     function createInfoBox(e) {
+      var mainNode;
+      for(var i = 0; i < mainTree.nodes.length; i++) {
+        if(e.target.id === mainTree.nodes[i].meta.name) {
+          mainNode = mainTree.nodes[i];
+        }
+      }
       var newTri = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-      newTri.setAttributeNS(null, "id", e.target.meta.name + "hovertri");
-      newTri.setAttributeNS(null, "points", (e.target.x + nodeRadius + 5) + "," + e.target.y + " " + (e.target.x + nodeRadius + 5 + 20) + "," + e.target.y + " " + (e.target.x + nodeRadius + 5 + 20) + "," + (e.target.y + 20));
+      newTri.setAttributeNS(null, "id", mainNode.meta.name + "hovertri");
+      newTri.setAttributeNS(null, "points", (mainNode.x + nodeRadius + 5) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + (mainNode.y + 20));
       newTri.setAttributeNS(null, "fill", "white");
       newTri.setAttributeNS(null, "stroke", "black"); // change to none when background fulfilled
       svg.appendChild(newTri);
       var newRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-      newRect.setAttributeNS(null, "id", e.target.meta.name + "hoverrect");
-      newRect.setAttributeNS(null, "x", "" + (e.target.x + nodeRadius + 5 + 20));
-      newRect.setAttributeNS(null, "y", "" + e.target.y);
+      newRect.setAttributeNS(null, "id", mainNode.meta.name + "hoverrect");
+      newRect.setAttributeNS(null, "x", "" + (mainNode.x + nodeRadius + 5 + 20));
+      newRect.setAttributeNS(null, "y", "" + mainNode.y);
       newRect.setAttributeNS(null, "height", "100");
       newRect.setAttributeNS(null, "width", "200");
       newRect.setAttributeNS(null, "fill", "white");
@@ -93,47 +99,53 @@ function Node(metadata, official) {
       var title = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
       var newP = document.createElement("p");
       newP.xmlns = "http://www.w3.org/1999/xhtml";
-      newP.textContent = e.target.meta.name;
+      newP.textContent = mainNode.meta.name;
       newP.style.fontSize = 20;
       title.appendChild(newP);
-      title.setAttributeNS(null, "id", e.target.meta.name + "hovertitle");
-      title.setAttributeNS(null, "x", "" + (e.target.x + nodeRadius + 5 + 20));
-      title.setAttributeNS(null, "y", "" + e.target.y);
+      title.setAttributeNS(null, "id", mainNode.meta.name + "hovertitle");
+      title.setAttributeNS(null, "x", "" + (mainNode.x + nodeRadius + 5 + 20));
+      title.setAttributeNS(null, "y", "" + mainNode.y);
       title.setAttributeNS(null, "height", "100");
       title.setAttributeNS(null, "width", "200");
       svg.appendChild(title);
       var byline = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
       var newP = document.createElement("p");
       newP.xmlns = "http://www.w3.org/1999/xhtml";
-      newP.textContent = "Created by " + e.target.meta.by + ", on " + e.target.meta.date;
+      newP.textContent = "Created by " + mainNode.meta.by + ", on " + mainNode.meta.date;
       newP.style.fontSize = 10;
       byline.appendChild(newP);
-      byline.setAttributeNS(null, "id", e.target.meta.name + "hoverbyline");
-      byline.setAttributeNS(null, "x", "" + (e.target.x + nodeRadius + 5 + 20));
-      byline.setAttributeNS(null, "y", "" + e.target.y + 27);
+      byline.setAttributeNS(null, "id", mainNode.meta.name + "hoverbyline");
+      byline.setAttributeNS(null, "x", "" + (mainNode.x + nodeRadius + 5 + 20));
+      byline.setAttributeNS(null, "y", "" + mainNode.y + 27);
       byline.setAttributeNS(null, "height", "100");
       byline.setAttributeNS(null, "width", "200");
       svg.appendChild(byline);
       var desc = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
       var newP = document.createElement("p");
       newP.xmlns = "http://www.w3.org/1999/xhtml";
-      newP.textContent = e.target.meta.desc;
+      newP.textContent = mainNode.meta.desc;
       newP.style.fontSize = 12;
       desc.appendChild(newP);
-      desc.setAttributeNS(null, "id", e.target.meta.name + "hoverdesc");
-      desc.setAttributeNS(null, "x", "" + (e.target.x + nodeRadius + 5 + 20));
-      desc.setAttributeNS(null, "y", "" + e.target.y + 42);
+      desc.setAttributeNS(null, "id", mainNode.meta.name + "hoverdesc");
+      desc.setAttributeNS(null, "x", "" + (mainNode.x + nodeRadius + 5 + 20));
+      desc.setAttributeNS(null, "y", "" + mainNode.y + 42);
       desc.setAttributeNS(null, "height", "100");
       desc.setAttributeNS(null, "width", "200");
       svg.appendChild(byline);
     }
     
     function removeInfoBox(e) {
-      document.getElementById(e.target.meta.name + "hovertri").parentNode.removeChild(document.getElementById(e.target.meta.name + "hovertri"));
-      document.getElementById(e.target.meta.name + "hoverrect").parentNode.removeChild(document.getElementById(e.target.meta.name + "hoverrect"));
-      document.getElementById(e.target.meta.name + "hovertitle").parentNode.removeChild(document.getElementById(e.target.meta.name + "hovertitle"));
-      document.getElementById(e.target.meta.name + "hoverbyline").parentNode.removeChild(document.getElementById(e.target.meta.name + "hoverbyline"));
-      document.getElementById(e.target.meta.name + "hoverdesc").parentNode.removeChild(document.getElementById(e.target.meta.name + "hoverdesc"));
+      var mainNode;
+      for(var i = 0; i < mainTree.nodes.length; i++) {
+        if(e.target.id === mainTree.nodes[i].meta.name) {
+          mainNode = mainTree.nodes[i];
+        }
+      }
+      document.getElementById(mainNode.meta.name + "hovertri").parentNode.removeChild(document.getElementById(mainNode.meta.name + "hovertri"));
+      document.getElementById(mainNode.meta.name + "hoverrect").parentNode.removeChild(document.getElementById(mainNode.meta.name + "hoverrect"));
+      document.getElementById(mainNode.meta.name + "hovertitle").parentNode.removeChild(document.getElementById(mainNode.meta.name + "hovertitle"));
+      document.getElementById(mainNode.meta.name + "hoverbyline").parentNode.removeChild(document.getElementById(mainNode.meta.name + "hoverbyline"));
+      document.getElementById(mainNode.meta.name + "hoverdesc").parentNode.removeChild(document.getElementById(mainNode.meta.name + "hoverdesc"));
     }
     
     newCircle.addEventListener("mouseover", createInfoBox);
