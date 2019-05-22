@@ -106,19 +106,19 @@ function Node(metadata, official) {
       title.id = mainNode.meta.name + "hovertitle";
       title.xmlns = "http://www.w3.org/1999/xhtml";
       title.textContent = mainNode.meta.name;
-      title.style.fontSize = 20;
+      title.style.fontSize = "20px";
       newForeignObject.appendChild(title);
       var byline = document.createElement("p");
       byline.id = mainNode.meta.name + "hoverbyline";
       byline.xmlns = "http://www.w3.org/1999/xhtml";
       byline.textContent = "Created by " + mainNode.meta.by + ", on " + mainNode.meta.date;
-      byline.style.fontSize = 10;
+      byline.style.fontSize = "10px";
       newForeignObject.appendChild(byline);
       var desc = document.createElement("p");
       desc.id = mainNode.meta.name + "hoverdesc";
       desc.xmlns = "http://www.w3.org/1999/xhtml";
       desc.textContent = mainNode.meta.desc;
-      desc.style.fontSize = 12;
+      desc.style.fontSize = "12px";
       newForeignObject.appendChild(desc);
       svg.appendChild(newForeignObject);
     }
