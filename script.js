@@ -120,6 +120,7 @@ function Node(metadata, official) {
       desc.textContent = mainNode.meta.desc;
       desc.style.fontSize = 12;
       newForeignObject.appendChild(desc);
+      svg.appendChild(newForeignObject);
     }
     
     function removeInfoBox(e) {
