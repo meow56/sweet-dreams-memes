@@ -87,7 +87,6 @@ function Node(metadata, official) {
       newTri.setAttributeNS(null, "id", mainNode.meta.name + "hovertri");
       newTri.setAttributeNS(null, "points", (mainNode.x + nodeRadius + 5) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + (mainNode.y + 20));
       newTri.setAttributeNS(null, "fill", "white");
-      newTri.setAttributeNS(null, "stroke", "black"); // change to none when background fulfilled
       svg.appendChild(newTri);
       var newRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
       newRect.setAttributeNS(null, "id", mainNode.meta.name + "hoverrect");
@@ -96,7 +95,6 @@ function Node(metadata, official) {
       newRect.setAttributeNS(null, "height", "100");
       newRect.setAttributeNS(null, "width", "200");
       newRect.setAttributeNS(null, "fill", "white");
-      newRect.setAttributeNS(null, "stroke", "black"); // change to none when background fulfilled
       svg.appendChild(newRect);
       var newForeignObject = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
       newForeignObject.setAttributeNS(null, "id", mainNode.meta.name + "hoverforeignobject");
@@ -173,15 +171,22 @@ function setup() {
                                    by: "epic meeeeem",
                                    date: "05/20/40", 
                                    desc: "When the world is ravaged by furries, the only savior of humanity will be one of those cat spritzers.", 
-                                   link: "sdfsdf"}),
+                                   link: "sdfsdf"}, true),
                          new Node({name: "strongeset",
                                    by: "STRONGESET!!!!",
                                    date: "09/09/09",
                                    desc: "EYE'M THA STRONGESET!!!",
-                                   link: "fjofojfojF"})
+                                   link: "fjofojfojF"}),
+                         new Node({name: "blaze it",
+                                   by: "420",
+                                   date: "April 20, 2069",
+                                   desc: "epic",
+                                   link: "BLAZEit"}, true)
                         ]); // please ACTUALLY define mainTree here once everything works
     
     mainTree.nodes[1].par = mainTree.nodes[0];
+    mainTree.nodes[2].par = mainTree.nodes[0];
+    
     for(var i = 0; i < mainTree.nodes.length; i++) {
       mainTree.nodes[i].gen = mainTree.nodes[i].par ? (mainTree.nodes[i].par.gen + 1) : 0;
     }
