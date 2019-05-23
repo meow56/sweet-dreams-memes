@@ -505,11 +505,7 @@ function setup() {
     
     for(var i = 0; i < mainTree.nodes.length; i++) {
       if(mainTree.nodes[i].off) {
-        for(var j = 0; j < mainTree.nodes.length; j++) {
-          if(mainTree.nodes[j].off && mainTree.nodes[j].gen === mainTree.nodes[i].gen - 1) {
-            mainTree.nodes[i].par = mainTree.nodes[j];
-          }
-        }
+        mainTree.nodes[i].par = mainTree.nodes[i - 1];
       }
       mainTree.nodes[i].gen = mainTree.nodes[i].par ? (mainTree.nodes[i].par.gen + 1) : 0;
     }
