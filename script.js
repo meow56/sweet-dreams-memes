@@ -203,18 +203,21 @@ function setup() {
     gen2Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
     gen2Rect.setAttributeNS(null, "height", "" + (((highGen + 1) * genY + 2 * nodeRadius) / 4));
     gen2Rect.setAttributeNS(null, "y", "" + (((highGen + 1) * genY + 2 * nodeRadius) / 4));
-    gen2Rect.setAttributeNS(null, "fill", "red");
+    gen2Rect.setAttributeNS(null, "fill", "blue");
     var gen3Rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     gen3Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
     gen3Rect.setAttributeNS(null, "height", "" + (((highGen + 1) * genY + 2 * nodeRadius) / 4));
     gen2Rect.setAttributeNS(null, "y", "" + (((highGen + 1) * genY + 2 * nodeRadius) / 2));
-    gen3Rect.setAttributeNS(null, "fill", "red");
+    gen3Rect.setAttributeNS(null, "fill", "yellow");
     var gen4Rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     gen4Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
     gen4Rect.setAttributeNS(null, "height", "" + (((highGen + 1) * genY + 2 * nodeRadius) / 4));
     gen2Rect.setAttributeNS(null, "y", "" + (((highGen + 1) * genY + 2 * nodeRadius) * 3 / 4));
-    gen4Rect.setAttributeNS(null, "fill", "red");
+    gen4Rect.setAttributeNS(null, "fill", "green");
     svg.appendChild(gen1Rect);
+    svg.appendChild(gen2Rect);
+    svg.appendChild(gen3Rect);
+    svg.appendChild(gen4Rect);
     for(var i = 0; i < highGen + 1; i++) {
       var newLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
       newLine.setAttributeNS(null, "x1", "0");
