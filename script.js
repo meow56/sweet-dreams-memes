@@ -71,12 +71,24 @@ function Node(metadata, official) {
     var newLink = document.createElementNS("http://www.w3.org/2000/svg", "a");
     newLink.setAttributeNS(null, "href", this.meta.link);
     newLink.setAttributeNS(null, "target", "_blank");
-    var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-    newCircle.setAttributeNS(null, "id", this.meta.name);
-    newCircle.setAttributeNS(null, "r", "" + nodeRadius);
-    newCircle.setAttributeNS(null, "cx", "" + this.x);
-    newCircle.setAttributeNS(null, "cy", "" + this.y);
-    newCircle.setAttributeNS(null, "fill", "white");
+    if(this.gen <= 25) {
+      // triangle
+      var newTriangle = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+      newTriangle.setAttributeNS(null, "points", this.x + "," + (this.y - nodeRadius) + " " + (this.x + (nodeRadius * Math.sqrt(3) / 2)) + "," + (this.y + (nodeRadius / 2)) + " " + (this.x - (nodeRadius * Math.sqrt(3) / 2)) + "," + (this.y + (nodeRadius / 2)));
+      newTriangle.setAttributeNS(null, "fill", "white");
+    } else if(this.gen <= 50) {
+      // diamond
+    } else if(this.gen <= 75) {
+      // circle
+      var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      newCircle.setAttributeNS(null, "id", this.meta.name);
+      newCircle.setAttributeNS(null, "r", "" + nodeRadius);
+      newCircle.setAttributeNS(null, "cx", "" + this.x);
+      newCircle.setAttributeNS(null, "cy", "" + this.y);
+      newCircle.setAttributeNS(null, "fill", "white");
+    } else {
+      // square
+    }
     
     function createInfoBox(e) {
       var mainNode;
