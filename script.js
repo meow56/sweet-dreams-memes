@@ -53,21 +53,21 @@ function Node(metadata, official) {
   this.y;
   this.display = function(nodes, i) {
     if(this.off) {
-      this.x = xOffset;
+      this.x = xOffset + nodeRadius;
     } else {
       var newNodes = [];
       var position;
       for(var j = 0; j < nodes.length; j++) {
-        if(nodes[j].gen === this.gen) {
+        if(nodes[j].gen === this.gen && !nodes[j].off) {
           newNodes.push(nodes[j]);
           if(j === i) {
             position = newNodes.length - 1;
           }
         }
       }
-      this.x = ((svg.getAttributeNS(null, "width") - xOffset) * (position + 1) / (newNodes.length + 1)) + xOffset;
+      this.x = ((svg.getAttributeNS(null, "width") - xOffset) * (position + 1) / (newNodes.length + 1)) + xOffset + nodeRadius;
     }
-    this.y = yOffset + (genY * this.gen);
+    this.y = nodeRadius + yOffset + (genY * this.gen);
     var newLink = document.createElementNS("http://www.w3.org/2000/svg", "a");
     newLink.setAttributeNS(null, "href", this.meta.link);
     var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
