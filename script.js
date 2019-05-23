@@ -73,19 +73,19 @@ function Node(metadata, official) {
     newLink.setAttributeNS(null, "target", "_blank");
     if(this.gen <= 25) {
       // triangle
-      var newTriangle = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-      newTriangle.setAttributeNS(null, "points", this.x + "," + (this.y - nodeRadius) + " " + (this.x + (nodeRadius * Math.sqrt(3) / 2)) + "," + (this.y + (nodeRadius / 2)) + " " + (this.x - (nodeRadius * Math.sqrt(3) / 2)) + "," + (this.y + (nodeRadius / 2)));
-      newTriangle.setAttributeNS(null, "fill", "white");
+      var nodeSymbol = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+      nodeSymbol.setAttributeNS(null, "points", this.x + "," + (this.y - nodeRadius) + " " + (this.x + (nodeRadius * Math.sqrt(3) / 2)) + "," + (this.y + (nodeRadius / 2)) + " " + (this.x - (nodeRadius * Math.sqrt(3) / 2)) + "," + (this.y + (nodeRadius / 2)));
+      nodeSymbol.setAttributeNS(null, "fill", "white");
     } else if(this.gen <= 50) {
       // diamond
     } else if(this.gen <= 75) {
       // circle
-      var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-      newCircle.setAttributeNS(null, "id", this.meta.name);
-      newCircle.setAttributeNS(null, "r", "" + nodeRadius);
-      newCircle.setAttributeNS(null, "cx", "" + this.x);
-      newCircle.setAttributeNS(null, "cy", "" + this.y);
-      newCircle.setAttributeNS(null, "fill", "white");
+      var nodeSymbol = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      nodeSymbol.setAttributeNS(null, "id", this.meta.name);
+      nodeSymbol.setAttributeNS(null, "r", "" + nodeRadius);
+      nodeSymbol.setAttributeNS(null, "cx", "" + this.x);
+      nodeSymbol.setAttributeNS(null, "cy", "" + this.y);
+      nodeSymbol.setAttributeNS(null, "fill", "white");
     } else {
       // square
     }
@@ -161,9 +161,9 @@ function Node(metadata, official) {
       document.getElementById(mainNode.meta.name + "hoverforeignobject").parentNode.removeChild(document.getElementById(mainNode.meta.name + "hoverforeignobject"));
     }
     
-    newCircle.addEventListener("mouseover", createInfoBox);
-    newCircle.addEventListener("mouseout", removeInfoBox);
-    newLink.appendChild(newCircle);
+    nodeSymbol.addEventListener("mouseover", createInfoBox);
+    nodeSymbol.addEventListener("mouseout", removeInfoBox);
+    newLink.appendChild(nodeSymbol);
     svg.appendChild(newLink);
   
     if(this.par) {
