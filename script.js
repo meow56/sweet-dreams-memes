@@ -97,7 +97,7 @@ function Node(metadata, official) {
       newRect.setAttributeNS(null, "id", mainNode.meta.name + "hoverrect");
       newRect.setAttributeNS(null, "x", "" + (mainNode.x + nodeRadius + 5 + 20));
       newRect.setAttributeNS(null, "y", "" + mainNode.y);
-      if(svg.getAttributeNS(null, "height") - nodeRadius === mainNode.y) {
+      if(svg.getAttributeNS(null, "height") - nodeRadius - yOffset === mainNode.y) {
         newRect.setAttributeNS(null, "y", "" + (mainNode.y - 100));
       }
       newRect.setAttributeNS(null, "height", "100");
@@ -108,7 +108,7 @@ function Node(metadata, official) {
       newForeignObject.setAttributeNS(null, "id", mainNode.meta.name + "hoverforeignobject");
       newForeignObject.setAttributeNS(null, "x", "" + (mainNode.x + nodeRadius + 5 + 20));
       newForeignObject.setAttributeNS(null, "y", "" + mainNode.y);
-      if(svg.getAttributeNS(null, "height") - nodeRadius === mainNode.y) {
+      if(svg.getAttributeNS(null, "height") - nodeRadius - yOffset === mainNode.y) {
         newForeignObject.setAttributeNS(null, "y", "" + (mainNode.y - 100));
       }
       newForeignObject.setAttributeNS(null, "height", "100");
@@ -210,7 +210,7 @@ function setup() {
     }
     svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttributeNS(null, "width", "" + (document.getElementById("mainDiv").offsetWidth));
-    svg.setAttributeNS(null, "height", "" + (highGen * genY + 2 * nodeRadius + yOffset));
+    svg.setAttributeNS(null, "height", "" + (highGen * genY + 2 * nodeRadius + 2 * yOffset));
     var gen1Rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     gen1Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
     gen1Rect.setAttributeNS(null, "height", "" + (((100 * genY) + 2 * nodeRadius) / 4));
