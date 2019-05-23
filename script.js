@@ -149,9 +149,9 @@ function Node(metadata, official) {
   
     if(this.par) {
       var startX = this.par.x;
-      var startY = this.par.y + nodeRadius;
+      var startY = this.par.y;
       var endX = this.x;
-      var endY = this.y - nodeRadius;
+      var endY = this.y;
       var p1X = startX;
       var p1Y = startY + ((startY + endY) / 2);
       var p2X = endX;
