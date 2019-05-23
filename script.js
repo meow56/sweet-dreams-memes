@@ -253,6 +253,7 @@ function setup() {
       genText.setAttributeNS(null, "x", "" + svg.getAttributeNS(null, "width"));
       genText.setAttributeNS(null, "y", "" + (i * genY + yOffset + nodeRadius));
       genText.textContent = "Gen " + i;
+      svg.appendChild(genText);
       // create SVG elements
     }
     document.getElementById("mainDiv").appendChild(svg);
