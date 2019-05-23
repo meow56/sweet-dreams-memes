@@ -254,7 +254,6 @@ function setup() {
       genText.setAttributeNS(null, "x", "" + svg.getAttributeNS(null, "width"));
       genText.setAttributeNS(null, "y", "" + (i * genY + yOffset + nodeRadius + 20));
       genText.textContent = "Gen " + i;
-      genText.setAttributeNS(null, "fill", "white");
       svg.appendChild(genText);
       // create SVG elements
     }
