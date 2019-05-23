@@ -609,13 +609,13 @@ function setup() {
     season1Logo.setAttributeNS(null, "width", "" + (2560 * genY / 2 / 1440));
     season1Logo.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - 17 - season1Logo.getAttributeNS(null, "width")));
     season1Logo.setAttributeNS(null, "y", "" + (1 * genY + yOffset + nodeRadius + 30));
-    season1Logo.setAttributeNS(null, "href", "/sweet-dream-memes/images/season1.png");
+    season1Logo.setAttributeNS(null, "href", "images/season1.png");
     var season2Logo = document.createElementNS("http://www.w3.org/2000/svg", "image");
     season2Logo.setAttributeNS(null, "height", "" + genY / 2);
     season2Logo.setAttributeNS(null, "width", "" + (4961 * genY / 2 / 3508));
     season2Logo.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - 17 - season2Logo.getAttributeNS(null, "width")));
     season2Logo.setAttributeNS(null, "y", "" + (26 * genY + yOffset + nodeRadius + 30));
-    season2Logo.setAttributeNS(null, "href", "/sweet-dream-memes/images/season2.png");
+    season2Logo.setAttributeNS(null, "href", "images/season2.png");
     svg.appendChild(season1Logo);
     svg.appendChild(season2Logo);
     for(var i = 0; i < highGen + 1; i++) {
