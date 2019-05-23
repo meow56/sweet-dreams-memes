@@ -49,6 +49,8 @@ function Node(metadata, official) {
   this.meta = metadata; // object that holds stuff like the name, date, description, link
   this.off = official || false;
   this.gen;
+  this.x;
+  this.y;
   this.display = function(nodes, i) {
     if(this.off) {
       this.x = xOffset;
@@ -142,7 +144,24 @@ function Node(metadata, official) {
     newCircle.addEventListener("mouseout", removeInfoBox);
     newLink.appendChild(newCircle);
     svg.appendChild(newLink);
+  
+    if(this.par) {
+      var startX = this.par.x;
+      var startY = this.par.y + nodeRadius;
+      var endX = this.x;
+      var endY = this.y - nodeRadius;
+      var p1X = startX;
+      var p1Y = startY + ((startY + endY) / 2);
+      var p2X = endX;
+      var p2Y = p1Y;
+      var parChiLine = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      parChiLine.setAttributeNS(null, "stroke", "grey");
+      parChiLine.setAttributeNS(null, "fill", "none");
+      parChiLine.setAttributeNS(null, "d", "M " + startX + "," + startY + " C " + p1X + "," + p1Y + " " + p2X + "," + p2Y + " " + endX + "," + endY);
+      svg.appendChild(parChiLine);
+    }
   }
+  
 }
 
 function setup() {
