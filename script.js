@@ -15,26 +15,6 @@ var genY = 200; // height difference between generations
 var mainTree;
 var svg;
 
-function owo() {
-  if(!document.getElementById("mainDiv")) {
-    setTimeout(owo, 100);
-  } else {
-var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-    newCircle.setAttributeNS(null, "r", "10");
-    newCircle.setAttributeNS(null, "cx", "50");
-    newCircle.setAttributeNS(null, "cy", "50");
-svg.appendChild(newCircle);
-var newLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
-newLine.setAttributeNS(null, "x1", "0");
-newLine.setAttributeNS(null, "y1", "20");
-newLine.setAttributeNS(null, "x2", "100");
-newLine.setAttributeNS(null, "y2", "80");
-newLine.setAttributeNS(null, "stroke", "black");
-svg.appendChild(newLine);
-return document.getElementById("mainDiv").appendChild(svg);
-  }
-}
-
 function Tree(nodes) {
   this.nodes = nodes;
   this.display = function() {
@@ -74,6 +54,7 @@ function Node(metadata, official) {
     if(this.gen <= 25) {
       // triangle
       var nodeSymbol = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+      nodeSymbol.setAttributeNS(null, "id", this.meta.name);
       nodeSymbol.setAttributeNS(null, "points", this.x + "," + (this.y - nodeRadius) + " " + (this.x + (nodeRadius * Math.sqrt(3) / 2)) + "," + (this.y + (nodeRadius / 2)) + " " + (this.x - (nodeRadius * Math.sqrt(3) / 2)) + "," + (this.y + (nodeRadius / 2)));
       nodeSymbol.setAttributeNS(null, "fill", "white");
     } else if(this.gen <= 50) {
