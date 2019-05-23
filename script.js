@@ -10,7 +10,7 @@ how do display
 
 var xOffset = 10; // how far to the right the first node is
 var yOffset = 10; // how far down the first node is
-var nodeRadius = 10; // the radius of each node, also used to determine the margins of the svg
+var nodeRadius = 20; // the radius of each node, also used to determine the margins of the svg
 var genY = 200; // height difference between generations
 var mainTree;
 var svg;
@@ -70,6 +70,7 @@ function Node(metadata, official) {
     this.y = nodeRadius + yOffset + (genY * this.gen);
     var newLink = document.createElementNS("http://www.w3.org/2000/svg", "a");
     newLink.setAttributeNS(null, "href", this.meta.link);
+    newLink.setAttributeNS(null, "target", "_blank");
     var newCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     newCircle.setAttributeNS(null, "id", this.meta.name);
     newCircle.setAttributeNS(null, "r", "" + nodeRadius);
