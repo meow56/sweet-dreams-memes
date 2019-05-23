@@ -97,7 +97,7 @@ function Node(metadata, official) {
       if(svg.getAttributeNS(null, "height") - nodeRadius - yOffset === mainNode.y) {
         finalY = mainNode.y - 20;
       }
-      if(svg.getAttributeNS(null, "width") - 200 <= mainNode.x) {
+      if(svg.getAttributeNS(null, "width") - 200 - 20 - 5 - nodeRadius <= mainNode.x) {
         finalX = mainNode.x - nodeRadius - 5 - 20;
         finalX2 = mainNode.x - nodeRadius - 5;
       }
@@ -111,7 +111,7 @@ function Node(metadata, official) {
       if(svg.getAttributeNS(null, "height") - nodeRadius - yOffset === mainNode.y) {
         newRect.setAttributeNS(null, "y", "" + (mainNode.y - 150));
       }
-      if(svg.getAttributeNS(null, "width") - 200 <= mainNode.x) {
+      if(svg.getAttributeNS(null, "width") - 200 - 20 - 5 - nodeRadius <= mainNode.x) {
         newRect.setAttributeNS(null, "x", "" + (mainNode.x - nodeRadius - 5 - 20 - 200));
       }
       newRect.setAttributeNS(null, "height", "150");
@@ -125,7 +125,7 @@ function Node(metadata, official) {
       if(svg.getAttributeNS(null, "height") - nodeRadius - yOffset === mainNode.y) {
         newForeignObject.setAttributeNS(null, "y", "" + (mainNode.y - 150));
       }
-      if(svg.getAttributeNS(null, "width") - 200 <= mainNode.x) {
+      if(svg.getAttributeNS(null, "width") - 200 - 20 - 5 - nodeRadius <= mainNode.x) {
         newForeignObject.setAttributeNS(null, "x", "" + (mainNode.x - nodeRadius - 5 - 20 - 200));
       }
       newForeignObject.setAttributeNS(null, "height", "150");
