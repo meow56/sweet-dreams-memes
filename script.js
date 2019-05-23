@@ -75,6 +75,7 @@ function Node(metadata, official) {
     newCircle.setAttributeNS(null, "r", "" + nodeRadius);
     newCircle.setAttributeNS(null, "cx", "" + this.x);
     newCircle.setAttributeNS(null, "cy", "" + this.y);
+    newCircle.setAttributeNS(null, "fill", "white");
     
     function createInfoBox(e) {
       var mainNode;
@@ -153,7 +154,7 @@ function Node(metadata, official) {
       var p2X = endX;
       var p2Y = p1Y;
       var parChiLine = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      parChiLine.setAttributeNS(null, "stroke", "grey");
+      parChiLine.setAttributeNS(null, "stroke", "black");
       parChiLine.setAttributeNS(null, "fill", "none");
       parChiLine.setAttributeNS(null, "d", "M " + startX + "," + startY + " C " + p1X + "," + p1Y + " " + p2X + "," + p2Y + " " + endX + "," + endY);
       svg.appendChild(parChiLine);
@@ -227,9 +228,9 @@ function setup() {
       var newLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
       newLine.setAttributeNS(null, "x1", "0");
       newLine.setAttributeNS(null, "y1", "" + (i * genY + yOffset + nodeRadius));
-      newLine.setAttributeNS(null, "x2", "" + svg.getAttributeNS(null, "width") - (2 * nodeRadius));
+      newLine.setAttributeNS(null, "x2", "" + svg.getAttributeNS(null, "width"));
       newLine.setAttributeNS(null, "y2", "" + (i * genY + yOffset + nodeRadius));
-      newLine.setAttributeNS(null, "stroke", "grey");
+      newLine.setAttributeNS(null, "stroke", "black");
       svg.appendChild(newLine);
       // create SVG elements
     }
