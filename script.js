@@ -250,9 +250,11 @@ function setup() {
       svg.appendChild(newLine);
       var genText = document.createElementNS("http://www.w3.org/2000/svg", "text");
       genText.setAttributeNS(null, "text-anchor", "end");
+      genText.style.fontSize = "20px";
       genText.setAttributeNS(null, "x", "" + svg.getAttributeNS(null, "width"));
-      genText.setAttributeNS(null, "y", "" + (i * genY + yOffset + nodeRadius));
+      genText.setAttributeNS(null, "y", "" + (i * genY + yOffset + nodeRadius + 20));
       genText.textContent = "Gen " + i;
+      genText.setAttributeNS(null, "fill", "white");
       svg.appendChild(genText);
       // create SVG elements
     }
