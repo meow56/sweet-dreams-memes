@@ -195,6 +195,11 @@ function setup() {
     svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttributeNS(null, "width", "" + (document.getElementById("mainDiv").offsetWidth));
     svg.setAttributeNS(null, "height", "" + ((highGen + 2) * genY + 2 * nodeRadius));
+    var gen1Rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    gen1Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
+    gen1Rect.setAttributeNS(null, "height", "" + (((highGen + 2) * genY + 2 * nodeRadius) / 4));
+    gen1Rect.setAttributeNS(null, "fill", "red");
+    svg.appendChild(gen1Rect);
     for(var i = 0; i < highGen + 1; i++) {
       var newLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
       newLine.setAttributeNS(null, "x1", "0");
