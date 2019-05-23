@@ -280,7 +280,7 @@ function setup() {
       genText.setAttributeNS(null, "text-anchor", "end");
       genText.style.fontSize = "20px";
       genText.setAttributeNS(null, "x", "" + svg.getAttributeNS(null, "width"));
-      genText.setAttributeNS(null, "y", "" + (i * genY + yOffset + nodeRadius));
+      genText.setAttributeNS(null, "y", "" + (i * genY + yOffset + nodeRadius - 3));
       genText.textContent = "Gen " + i;
       svg.appendChild(genText);
       // create SVG elements
