@@ -88,12 +88,18 @@ function Node(metadata, official) {
       var newTri = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
       newTri.setAttributeNS(null, "id", mainNode.meta.name + "hovertri");
       newTri.setAttributeNS(null, "points", (mainNode.x + nodeRadius + 5) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + (mainNode.y + 20));
+      if(svg.getAttributeNS(null, "height") - nodeRadius === mainNode.y) {
+        newTri.setAttributeNS(null, "points", (mainNode.x + nodeRadius + 5) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + (mainNode.y - 20));
+      }
       newTri.setAttributeNS(null, "fill", "white");
       svg.appendChild(newTri);
       var newRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
       newRect.setAttributeNS(null, "id", mainNode.meta.name + "hoverrect");
       newRect.setAttributeNS(null, "x", "" + (mainNode.x + nodeRadius + 5 + 20));
       newRect.setAttributeNS(null, "y", "" + mainNode.y);
+      if(svg.getAttributeNS(null, "height") - nodeRadius === mainNode.y) {
+        newRect.setAttributeNS(null, "y", "" + (mainNode.y - 200));
+      }
       newRect.setAttributeNS(null, "height", "100");
       newRect.setAttributeNS(null, "width", "200");
       newRect.setAttributeNS(null, "fill", "white");
@@ -102,6 +108,9 @@ function Node(metadata, official) {
       newForeignObject.setAttributeNS(null, "id", mainNode.meta.name + "hoverforeignobject");
       newForeignObject.setAttributeNS(null, "x", "" + (mainNode.x + nodeRadius + 5 + 20));
       newForeignObject.setAttributeNS(null, "y", "" + mainNode.y);
+      if(svg.getAttributeNS(null, "height") - nodeRadius === mainNode.y) {
+        newForeignObject.setAttributeNS(null, "y", "" + (mainNode.y - 200));
+      }
       newForeignObject.setAttributeNS(null, "height", "100");
       newForeignObject.setAttributeNS(null, "width", "200");
       var title = document.createElement("div");
