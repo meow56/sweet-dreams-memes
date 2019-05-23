@@ -249,7 +249,7 @@ function setup() {
       newLine.setAttributeNS(null, "stroke", "black");
       svg.appendChild(newLine);
       var genText = document.createElementNS("http://www.w3.org/2000/svg", "text");
-      genText.setAttributeNS(null, "style", "text-align: right;");
+      genText.setAttributeNS(null, "text-anchor", "end");
       genText.setAttributeNS(null, "x", "" + svg.getAttributeNS(null, "width"));
       genText.setAttributeNS(null, "y", "" + (i * genY + yOffset + nodeRadius));
       genText.textContent = "Gen " + i;
