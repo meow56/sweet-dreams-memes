@@ -110,7 +110,7 @@ function Node(metadata, official) {
         newRect.setAttributeNS(null, "y", "" + (mainNode.y - 150));
       }
       if(svg.getAttributeNS(null, "width") - 200 <= mainNode.x) {
-        newRect.setAttributeNS(null, "x", "" + (mainNode.x - nodeRadius - 5 - 20));
+        newRect.setAttributeNS(null, "x", "" + (mainNode.x - nodeRadius - 5 - 20 - 200));
       }
       newRect.setAttributeNS(null, "height", "150");
       newRect.setAttributeNS(null, "width", "200");
@@ -124,7 +124,7 @@ function Node(metadata, official) {
         newForeignObject.setAttributeNS(null, "y", "" + (mainNode.y - 150));
       }
       if(svg.getAttributeNS(null, "width") - 200 <= mainNode.x) {
-        newForeignObject.setAttributeNS(null, "x", "" + (mainNode.x - nodeRadius - 5 - 20));
+        newForeignObject.setAttributeNS(null, "x", "" + (mainNode.x - nodeRadius - 5 - 20 - 200));
       }
       newForeignObject.setAttributeNS(null, "height", "150");
       newForeignObject.setAttributeNS(null, "width", "200");
