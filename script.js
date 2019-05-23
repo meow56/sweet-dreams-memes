@@ -142,11 +142,6 @@ function Node(metadata, official) {
       document.getElementById(mainNode.meta.name + "hoverforeignobject").parentNode.removeChild(document.getElementById(mainNode.meta.name + "hoverforeignobject"));
     }
     
-    nodeSymbol.addEventListener("mouseover", createInfoBox);
-    nodeSymbol.addEventListener("mouseout", removeInfoBox);
-    newLink.appendChild(nodeSymbol);
-    svg.appendChild(newLink);
-  
     if(this.par) {
       var startX = this.par.x;
       var startY = this.par.y;
@@ -166,10 +161,16 @@ function Node(metadata, official) {
       } else {
         parChiLine.setAttributeNS(null, "stroke", "#56b12e");
       }
+      parChiLine.setAttributeNS(null, "stroke-width", "3");
       parChiLine.setAttributeNS(null, "fill", "none");
       parChiLine.setAttributeNS(null, "d", "M " + startX + "," + startY + " C " + p1X + "," + p1Y + " " + p2X + "," + p2Y + " " + endX + "," + endY);
       svg.appendChild(parChiLine);
     }
+    
+    nodeSymbol.addEventListener("mouseover", createInfoBox);
+    nodeSymbol.addEventListener("mouseout", removeInfoBox);
+    newLink.appendChild(nodeSymbol);
+    svg.appendChild(newLink);
   }
   
 }
