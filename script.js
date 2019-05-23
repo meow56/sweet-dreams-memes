@@ -500,7 +500,7 @@ function setup() {
     //                      35, 36,37,38, 39, 40, 41,42,43, 44, 45, 46, 47, 48,49, 50, 51, 52,53,54, 55, 56, 57, 58, 59,60,61
     var unofficialParents = [5, 35, 2, 1, 25, 29, 29, 1, 5, 43, 44, 45, 44, 44, 5, 49, 50, 44, 6, 5, 54, 44, 44, 57, 57, 2, 2];
     for(var i = 0; i < unofficialParents.length; i++) {
-      mainTree.nodes[mainTree.nodes.length + ((-1 * unofficialParents.length) + i)].par = mainTree[unofficialParents[i]];
+      mainTree.nodes[mainTree.nodes.length + ((-1 * unofficialParents.length) + i)].par = mainTree.nodes[unofficialParents[i]];
     }
     
     for(var i = 0; i < mainTree.nodes.length; i++) {
