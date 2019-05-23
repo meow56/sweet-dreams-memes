@@ -170,7 +170,7 @@ function Node(metadata, official) {
         var endY = this.y - (nodeRadius / Math.sqrt(2));
       }
       var p1X = startX;
-      var p1Y = startY + ((startY + endY) / 2);
+      var p1Y = startY + ((endY - startY) / 2);
       var p2X = endX;
       var p2Y = p1Y;
       var parChiLine = document.createElementNS("http://www.w3.org/2000/svg", "path");
