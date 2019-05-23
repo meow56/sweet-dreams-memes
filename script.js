@@ -104,7 +104,7 @@ function Node(metadata, official) {
       if(svg.getAttributeNS(null, "height") - nodeRadius - yOffset === mainNode.y) {
         newRect.setAttributeNS(null, "y", "" + (mainNode.y - 100));
       }
-      newRect.setAttributeNS(null, "height", "200");
+      newRect.setAttributeNS(null, "height", "150");
       newRect.setAttributeNS(null, "width", "200");
       newRect.setAttributeNS(null, "fill", "white");
       svg.appendChild(newRect);
@@ -115,13 +115,13 @@ function Node(metadata, official) {
       if(svg.getAttributeNS(null, "height") - nodeRadius - yOffset === mainNode.y) {
         newForeignObject.setAttributeNS(null, "y", "" + (mainNode.y - 100));
       }
-      newForeignObject.setAttributeNS(null, "height", "100");
+      newForeignObject.setAttributeNS(null, "height", "150");
       newForeignObject.setAttributeNS(null, "width", "200");
       var title = document.createElement("div");
       title.id = mainNode.meta.name + "hovertitle";
       title.xmlns = "http://www.w3.org/1999/xhtml";
       title.textContent = mainNode.meta.name;
-      title.style.fontSize = "15px";
+      title.style.fontSize = "17px";
       newForeignObject.appendChild(title);
       var byline = document.createElement("div");
       byline.id = mainNode.meta.name + "hoverbyline";
@@ -566,25 +566,25 @@ function setup() {
     var season1Text = document.createElementNS("http://www.w3.org/2000/svg", "text");
     season1Text.setAttributeNS(null, "text-anchor", "end");
     season1Text.style.fontSize = "40px";
-    season1Text.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - xOffset));
+    season1Text.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - 17));
     season1Text.setAttributeNS(null, "y", "" + (1 * genY + yOffset + nodeRadius + 30));
     season1Text.textContent = "Season 1";
     var season2Text = document.createElementNS("http://www.w3.org/2000/svg", "text");
     season2Text.setAttributeNS(null, "text-anchor", "end");
     season2Text.style.fontSize = "40px";
-    season2Text.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - xOffset));
+    season2Text.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - 17));
     season2Text.setAttributeNS(null, "y", "" + (26 * genY + yOffset + nodeRadius + 30));
     season2Text.textContent = "Season 2";
     var season3Text = document.createElementNS("http://www.w3.org/2000/svg", "text");
     season3Text.setAttributeNS(null, "text-anchor", "end");
     season3Text.style.fontSize = "40px";
-    season3Text.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - xOffset));
+    season3Text.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - 17));
     season3Text.setAttributeNS(null, "y", "" + (51 * genY + yOffset + nodeRadius + 30));
     season3Text.textContent = "Season 3";
     var season4Text = document.createElementNS("http://www.w3.org/2000/svg", "text");
     season4Text.setAttributeNS(null, "text-anchor", "end");
     season4Text.style.fontSize = "40px";
-    season4Text.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - xOffset));
+    season4Text.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - 17));
     season4Text.setAttributeNS(null, "y", "" + (76 * genY + yOffset + nodeRadius + 30));
     season4Text.textContent = "Season 4";
     svg.appendChild(season1Text);
@@ -602,7 +602,7 @@ function setup() {
       var genText = document.createElementNS("http://www.w3.org/2000/svg", "text");
       genText.setAttributeNS(null, "text-anchor", "end");
       genText.style.fontSize = "20px";
-      genText.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - xOffset));
+      genText.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - 17));
       genText.setAttributeNS(null, "y", "" + (i * genY + yOffset + nodeRadius - 3));
       genText.textContent = "Gen " + i;
       svg.appendChild(genText);
