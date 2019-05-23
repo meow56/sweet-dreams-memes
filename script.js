@@ -163,15 +163,7 @@ function Node(metadata, official) {
       var p2X = endX;
       var p2Y = p1Y;
       var parChiLine = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      if(this.gen <= 25) {
-        parChiLine.setAttributeNS(null, "stroke", "#fc223b");
-      } else if(this.gen <= 50) {
-        parChiLine.setAttributeNS(null, "stroke", "#3793e0");
-      } else if(this.gen <= 75) {
-        parChiLine.setAttributeNS(null, "stroke", "#ffb508");
-      } else {
-        parChiLine.setAttributeNS(null, "stroke", "#56b12e");
-      }
+      parChiLine.setAttributeNS(null, "stroke", "black");
       parChiLine.setAttributeNS(null, "stroke-width", "3");
       parChiLine.setAttributeNS(null, "fill", "none");
       parChiLine.setAttributeNS(null, "d", "M " + startX + "," + startY + " C " + p1X + "," + p1Y + " " + p2X + "," + p2Y + " " + endX + "," + endY);
