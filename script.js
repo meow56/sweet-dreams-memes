@@ -161,12 +161,21 @@ function Node(metadata, official) {
         var endY = this.y - nodeRadius;
       } else if(this.gen <= 50) {
         var startY = this.par.y + nodeRadius;
+        if(this.gen === 26) {
+          startY = this.par.y + (nodeRadius / 2);
+        }
         var endY = this.y - nodeRadius;
       } else if(this.gen <= 75) {
         var startY = this.par.y + nodeRadius;
+        if(this.gen === 51) {
+          startY = this.par.y + nodeRadius;
+        }
         var endY = this.y - nodeRadius;
       } else {
         var startY = this.par.y + (nodeRadius / Math.sqrt(2));
+        if(this.gen === 76) {
+          startY = this.par.y + nodeRadius;
+        }
         var endY = this.y - (nodeRadius / Math.sqrt(2));
       }
       var p1X = startX;
