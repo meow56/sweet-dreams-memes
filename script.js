@@ -500,23 +500,8 @@ function setup() {
     //                      35, 36,37,38, 39, 40, 41,42,43, 44, 45, 46, 47, 48,49, 50, 51, 52,53,54, 55, 56, 57, 58, 59,60,61
     var unofficialParents = [5, 35, 2, 1, 25, 29, 29, 1, 5, 43, 44, 45, 44, 44, 5, 49, 50, 44, 6, 5, 54, 44, 44, 57, 57, 2, 2];
     for(var i = 0; i < unofficialParents.length; i++) {
-      mainTree.nodes[(-1 * unofficialParents.length) + i].par = mainTree[unofficialParents[i]];
+      mainTree.nodes[mainTree.nodes.length + ((-1 * unofficialParents.length) + i)].par = mainTree[unofficialParents[i]];
     }
-    mainTree.nodes[35].par = mainTree.nodes[5];
-    mainTree.nodes[36].par = mainTree.nodes[35];
-    mainTree.nodes[37].par = mainTree.nodes[2];
-    mainTree.nodes[38].par = mainTree.nodes[1];
-    mainTree.nodes[39].par = mainTree.nodes[25];
-    mainTree.nodes[40].par = mainTree.nodes[29];
-    mainTree.nodes[41].par = mainTree.nodes[29];
-    mainTree.nodes[42].par = mainTree.nodes[1];
-    mainTree.nodes[43].par = mainTree.nodes[5];
-    mainTree.nodes[44].par = mainTree.nodes[43];
-    mainTree.nodes[45].par = mainTree.nodes[44];
-    mainTree.nodes[46].par = mainTree.nodes[45];
-    mainTree.nodes[47].par = mainTree.nodes[44];
-    mainTree.nodes[48].par = mainTree.nodes[44];
-    mainTree.nodes[49].par = mainTree.nodes[5];
     
     for(var i = 0; i < mainTree.nodes.length; i++) {
       if(mainTree.nodes[i].off) {
