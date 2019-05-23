@@ -92,14 +92,16 @@ function Node(metadata, official) {
       var newTri = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
       newTri.setAttributeNS(null, "id", mainNode.meta.name + "hovertri");
       var finalX = mainNode.x + nodeRadius + 5 + 20;
+      var finalX2 = mainNode.x + nodeRadius + 5;
       var finalY = mainNode.y + 20;
       if(svg.getAttributeNS(null, "height") - nodeRadius - yOffset === mainNode.y) {
         finalY = mainNode.y - 20;
       }
       if(svg.getAttributeNS(null, "width") - 200 <= mainNode.x) {
         finalX = mainNode.x - nodeRadius - 5 - 20;
+        finalX2 = mainNode.x - nodeRadius - 5;
       }
-      newTri.setAttributeNS(null, "points", (mainNode.x + nodeRadius + 5) + "," + mainNode.y + " " + finalX + "," + mainNode.y + " " + finalX + "," + finalY);
+      newTri.setAttributeNS(null, "points", finalX2 + "," + mainNode.y + " " + finalX + "," + mainNode.y + " " + finalX + "," + finalY);
       newTri.setAttributeNS(null, "fill", "white");
       svg.appendChild(newTri);
       var newRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
