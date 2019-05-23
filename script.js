@@ -97,7 +97,7 @@ function Node(metadata, official) {
         finalY = mainNode.y - 20;
       }
       if(svg.getAttributeNS(null, "width") - 200 <= mainNode.x) {
-        final X = mainNode.x - nodeRadius - 5 - 20;
+        finalX = mainNode.x - nodeRadius - 5 - 20;
       }
       newTri.setAttributeNS(null, "points", (mainNode.x + nodeRadius + 5) + "," + mainNode.y + " " + finalX + "," + mainNode.y + " " + finalX + "," + finalY);
       newTri.setAttributeNS(null, "fill", "white");
