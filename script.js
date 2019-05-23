@@ -219,7 +219,7 @@ function setup() {
     var gen1Rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     gen1Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
     gen1Rect.setAttributeNS(null, "height", "" + (((100 * genY) + 2 * nodeRadius) / 4));
-    gen2Rect.setAttributeNS(null, "y", "" + genY);
+    gen1Rect.setAttributeNS(null, "y", "" + genY);
     gen1Rect.setAttributeNS(null, "fill", "#ff3859");
     var gen2Rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     gen2Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
