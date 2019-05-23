@@ -91,10 +91,15 @@ function Node(metadata, official) {
       }
       var newTri = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
       newTri.setAttributeNS(null, "id", mainNode.meta.name + "hovertri");
-      newTri.setAttributeNS(null, "points", (mainNode.x + nodeRadius + 5) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + (mainNode.y + 20));
+      var finalX = mainNode.x + nodeRadius + 5 + 20;
+      var finalY = mainNode.y + 20;
       if(svg.getAttributeNS(null, "height") - nodeRadius - yOffset === mainNode.y) {
-        newTri.setAttributeNS(null, "points", (mainNode.x + nodeRadius + 5) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + (mainNode.y - 20));
+        finalY = mainNode.y - 20;
       }
+      if(svg.getAttributeNS(null, "width") - 200 <= mainNode.x) {
+        final X = mainNode.x - nodeRadius - 5 - 20;
+      }
+      newTri.setAttributeNS(null, "points", (mainNode.x + nodeRadius + 5) + "," + mainNode.y + " " + finalX + "," + mainNode.y + " " + finalX + "," + finalY);
       newTri.setAttributeNS(null, "fill", "white");
       svg.appendChild(newTri);
       var newRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
@@ -102,7 +107,10 @@ function Node(metadata, official) {
       newRect.setAttributeNS(null, "x", "" + (mainNode.x + nodeRadius + 5 + 20));
       newRect.setAttributeNS(null, "y", "" + mainNode.y);
       if(svg.getAttributeNS(null, "height") - nodeRadius - yOffset === mainNode.y) {
-        newRect.setAttributeNS(null, "y", "" + (mainNode.y - 100));
+        newRect.setAttributeNS(null, "y", "" + (mainNode.y - 150));
+      }
+      if(svg.getAttributeNS(null, "width") - 200 <= mainNode.x) {
+        newRect.setAttributeNS(null, "x", "" + (mainNode.x - nodeRadius - 5 - 20));
       }
       newRect.setAttributeNS(null, "height", "150");
       newRect.setAttributeNS(null, "width", "200");
@@ -113,7 +121,10 @@ function Node(metadata, official) {
       newForeignObject.setAttributeNS(null, "x", "" + (mainNode.x + nodeRadius + 5 + 20));
       newForeignObject.setAttributeNS(null, "y", "" + mainNode.y);
       if(svg.getAttributeNS(null, "height") - nodeRadius - yOffset === mainNode.y) {
-        newForeignObject.setAttributeNS(null, "y", "" + (mainNode.y - 100));
+        newForeignObject.setAttributeNS(null, "y", "" + (mainNode.y - 150));
+      }
+      if(svg.getAttributeNS(null, "width") - 200 <= mainNode.x) {
+        newForeignObject.setAttributeNS(null, "x", "" + (mainNode.x - nodeRadius - 5 - 20));
       }
       newForeignObject.setAttributeNS(null, "height", "150");
       newForeignObject.setAttributeNS(null, "width", "200");
