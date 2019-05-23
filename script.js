@@ -144,9 +144,20 @@ function Node(metadata, official) {
     
     if(this.par) {
       var startX = this.par.x;
-      var startY = this.par.y;
       var endX = this.x;
-      var endY = this.y;
+      if(this.gen <= 25) {
+        var startY = this.par.y + (nodeRadius / 2);
+        var endY = this.y - nodeRadius;
+      } else if(this.gen <= 50) {
+        var startY = this.par.y + nodeRadius;
+        var endY = this.y - nodeRadius;
+      } else if(this.gen <= 75) {
+        var startY = this.par.y + nodeRadius;
+        var endY = this.y - nodeRadius;
+      } else {
+        var startY = this.par.y + (nodeRadius / Math.sqrt(2));
+        var endY = this.y - (nodeRadius / Math.sqrt(2));
+      }
       var p1X = startX;
       var p1Y = startY + ((startY + endY) / 2);
       var p2X = endX;
