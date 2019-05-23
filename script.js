@@ -59,6 +59,10 @@ function Node(metadata, official) {
       nodeSymbol.setAttributeNS(null, "fill", "white");
     } else if(this.gen <= 50) {
       // diamond
+      var nodeSymbol = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+      nodeSymbol.setAttributeNS(null, "id", this.meta.name);
+      nodeSymbol.setAttributeNS(null, "points", this.x + "," + (this.y - nodeRadius) + " " + (this.x + nodeRadius) + "," + this.y + " " + this.x + "," + (this.y + nodeRadius) + " " + (this.x - nodeRadius) + "," + this.y);
+      nodeSymbol.setAttributeNS(null, "fill", "white");
     } else if(this.gen <= 75) {
       // circle
       var nodeSymbol = document.createElementNS("http://www.w3.org/2000/svg", "circle");
@@ -69,6 +73,13 @@ function Node(metadata, official) {
       nodeSymbol.setAttributeNS(null, "fill", "white");
     } else {
       // square
+      var nodeSymbol = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      nodeSymbol.setAttributeNS(null, "id", this.meta.name);
+      nodeSymbol.setAttributeNS(null, "x", "" + (this.x - (nodeRadius / Math.sqrt(2))));
+      nodeSymbol.setAttributeNS(null, "y", "" + (this.y - (nodeRadius / Math.sqrt(2))));
+      nodeSymbol.setAttributeNS(null, "width", "" + (nodeRadius * Math.sqrt(2)));
+      nodeSymbol.setAttributeNS(null, "height", "" + (nodeRadius * Math.sqrt(2)));
+      nodeSymbol.setAttributeNS(null, "fill", "white");
     }
     
     function createInfoBox(e) {
