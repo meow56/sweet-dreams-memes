@@ -219,21 +219,22 @@ function setup() {
     var gen1Rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     gen1Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
     gen1Rect.setAttributeNS(null, "height", "" + (((100 * genY) + 2 * nodeRadius) / 4));
+    gen2Rect.setAttributeNS(null, "y", "" + genY);
     gen1Rect.setAttributeNS(null, "fill", "#ff3859");
     var gen2Rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     gen2Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
     gen2Rect.setAttributeNS(null, "height", "" + ((100 * genY + 2 * nodeRadius) / 4));
-    gen2Rect.setAttributeNS(null, "y", "" + ((100 * genY + 2 * nodeRadius) / 4));
+    gen2Rect.setAttributeNS(null, "y", "" + (((100 * genY + 2 * nodeRadius) / 4) + genY));
     gen2Rect.setAttributeNS(null, "fill", "#45a2e5");
     var gen3Rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     gen3Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
     gen3Rect.setAttributeNS(null, "height", "" + ((100 * genY + 2 * nodeRadius) / 4));
-    gen3Rect.setAttributeNS(null, "y", "" + ((100 * genY + 2 * nodeRadius) / 2));
+    gen3Rect.setAttributeNS(null, "y", "" + (((100 * genY + 2 * nodeRadius) / 2) + genY));
     gen3Rect.setAttributeNS(null, "fill", "#fec009");
     var gen4Rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     gen4Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
     gen4Rect.setAttributeNS(null, "height", "" + ((100 * genY + 2 * nodeRadius) / 4));
-    gen4Rect.setAttributeNS(null, "y", "" + ((100 * genY + 2 * nodeRadius) * 3 / 4));
+    gen4Rect.setAttributeNS(null, "y", "" + (((100 * genY + 2 * nodeRadius) * 3 / 4) + genY));
     gen4Rect.setAttributeNS(null, "fill", "#67be39");
     svg.appendChild(gen1Rect);
     svg.appendChild(gen2Rect);
@@ -247,6 +248,11 @@ function setup() {
       newLine.setAttributeNS(null, "y2", "" + (i * genY + yOffset + nodeRadius));
       newLine.setAttributeNS(null, "stroke", "black");
       svg.appendChild(newLine);
+      var genText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      genText.setAttributeNS(null, "style", "text-align: right;");
+      genText.setAttributeNS(null, "x", "" + svg.getAttributeNS(null, "width"));
+      genText.setAttributeNS(null, "y", "" + (i * genY + yOffset + nodeRadius));
+      genText.textContent = "Gen " + i;
       // create SVG elements
     }
     document.getElementById("mainDiv").appendChild(svg);
