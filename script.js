@@ -88,7 +88,7 @@ function Node(metadata, official) {
       var newTri = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
       newTri.setAttributeNS(null, "id", mainNode.meta.name + "hovertri");
       newTri.setAttributeNS(null, "points", (mainNode.x + nodeRadius + 5) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + (mainNode.y + 20));
-      if(svg.getAttributeNS(null, "height") - nodeRadius === mainNode.y) {
+      if(svg.getAttributeNS(null, "height") - nodeRadius - yOffset === mainNode.y) {
         newTri.setAttributeNS(null, "points", (mainNode.x + nodeRadius + 5) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + mainNode.y + " " + (mainNode.x + nodeRadius + 5 + 20) + "," + (mainNode.y - 20));
       }
       newTri.setAttributeNS(null, "fill", "white");
