@@ -567,7 +567,7 @@ function setup() {
                              "Sweet Dreams but please read the description (ft. Hatsune miku)", 
                              5, 
                              "sweet dreams kahoot theme, Jokers gun, TL clap & the crab rave shaker but I added a creeper", 
-                             "sweet dreams kahoot, jokers gun, TL clap, crab rave, creeper and oof but i added the game cube sound", 
+                             "sweet dreams kahoot theme, Jokers gun, TL clap, crab rave shaker & creeper but with 100% more OOF", 
                              "Sweet Dreams but please read the description (ft. Hatsune miku)", 
                              6, 
                              5, 
