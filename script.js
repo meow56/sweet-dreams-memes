@@ -430,7 +430,7 @@ function setup() {
                          new Node({name: "Sweet Dreams Kahoot but Etika has a mental breakdown",
                                    by: "Lobster_",
                                    date: "May 15, 2019",
-                                   desc: "OH MY GAAAAWD!!!!",
+                                   desc: "OH MY GOOOOD!!!!",
                                    link: "https://www.youtube.com/watch?v=IIKhv1q2dJc"}), // 39
                          new Node({name: "sweet dreams with kahoot music, but as a ytpmv recreation (unofficial)",
                                    by: "Katu-Jan",
@@ -556,7 +556,7 @@ function setup() {
                              2, 
                              1, 
                              28, 
-                             29, 
+                             25, 
                              29, 
                              1, 
                              5, 
