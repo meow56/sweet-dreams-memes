@@ -555,7 +555,7 @@ function setup() {
                              "Sweet dreams with kahoot theme, fixed tempo & Jokers gun & tainted love & etc i put bona-petite", 
                              2, 
                              1, 
-                             25, 
+                             28, 
                              29, 
                              29, 
                              1, 
