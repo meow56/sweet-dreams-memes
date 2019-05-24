@@ -552,7 +552,7 @@ function setup() {
     }
     var unofficialParents = [
                              5, 
-                             mainTree.nodes.length - findIndex("Sweet dreams with kahoot theme, fixed tempo & Jokers gun & tainted love & etc i put bona-petite"), 
+                             "Sweet dreams with kahoot theme, fixed tempo & Jokers gun & tainted love & etc i put bona-petite", 
                              2, 
                              1, 
                              25, 
@@ -560,27 +560,31 @@ function setup() {
                              29, 
                              1, 
                              5, 
-                             mainTree.nodes.length - findIndex("sweet dreams but with kahoot music over it,crab rave,tainted love,men at work and my previous crap"), 
-                             mainTree.nodes.length - findIndex("Sweet Dreams but please read the description (ft. Hatsune miku)"), 
-                             mainTree.nodes.length - findIndex("Sweet Dreams but please read the description (ft. Hatsune miku) But I added the Pelones"), 
-                             mainTree.nodes.length - findIndex("Sweet Dreams but please read the description (ft. Hatsune miku)"), 
-                             mainTree.nodes.length - findIndex("Sweet Dreams but please read the description (ft. Hatsune miku)"), 
+                             "sweet dreams but with kahoot music over it,crab rave,tainted love,men at work and my previous crap", 
+                             "Sweet Dreams but please read the description (ft. Hatsune miku)", 
+                             "Sweet Dreams but please read the description (ft. Hatsune miku) But I added the Pelones", 
+                             "Sweet Dreams but please read the description (ft. Hatsune miku)", 
+                             "Sweet Dreams but please read the description (ft. Hatsune miku)", 
                              5, 
-                             mainTree.nodes.length - findIndex("sweet dreams kahoot theme, Jokers gun, TL clap & the crab rave shaker but I added a creeper"), 
-                             mainTree.nodes.length - findIndex("sweet dreams kahoot, jokers gun, TL clap, crab rave, creeper and oof but i added the game cube sound"), 
-                             mainTree.nodes.length - findIndex("Sweet Dreams but please read the description (ft. Hatsune miku)"), 
+                             "sweet dreams kahoot theme, Jokers gun, TL clap & the crab rave shaker but I added a creeper", 
+                             "sweet dreams kahoot, jokers gun, TL clap, crab rave, creeper and oof but i added the game cube sound", 
+                             "Sweet Dreams but please read the description (ft. Hatsune miku)", 
                              6, 
                              5, 
-                             mainTree.nodes.length - findIndex("sweet dreams with the kahoot theme ft. an otamatone but read the desc."), 
-                             mainTree.nodes.length - findIndex("Sweet Dreams but please read the description (ft. Hatsune miku)"), 
-                             mainTree.nodes.length - findIndex("Sweet Dreams but please read the description (ft. Hatsune miku)"), 
-                             mainTree.nodes.length - findIndex("Sweet Dreams But Only The Description Can Express The Insanity At Work"), 
-                             mainTree.nodes.length - findIndex("Sweet Dreams But Only The Description Can Express The Insanity At Work"), 
+                             "sweet dreams with the kahoot theme ft. an otamatone but read the desc.", 
+                             "Sweet Dreams but please read the description (ft. Hatsune miku)", 
+                             "Sweet Dreams but please read the description (ft. Hatsune miku)", 
+                             "Sweet Dreams But Only The Description Can Express The Insanity At Work", 
+                             "Sweet Dreams But Only The Description Can Express The Insanity At Work", 
                              2, 
                              2
                             ];
     for(var i = 0; i < unofficialParents.length; i++) {
-      mainTree.nodes[mainTree.nodes.length + ((-1 * unofficialParents.length) + i)].par = mainTree.nodes[unofficialParents[i]];
+      if(Number.isInteger(unofficialParents[i])) {
+        mainTree.nodes[mainTree.nodes.length + ((-1 * unofficialParents.length) + i)].par = mainTree.nodes[unofficialParents[i]];
+      } else {
+        mainTree.nodes[mainTree.nodes.length + ((-1 * unofficialParents.length) + i)].par = mainTree.nodes[findIndex(unofficialParents[i])];
+      }
     }
     
     for(var i = 0; i < mainTree.nodes.length; i++) {
