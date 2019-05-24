@@ -391,8 +391,21 @@ function setup() {
                                    date: "May 22, 2019",
                                    desc: "Does this count as Waluigi in Smash?",
                                    link: "https://www.youtube.com/watch?v=TwqkNPgHy74"}, true),
+                         new Node({name: "{Generation 35} Sweet Kahoots; but the despacito spider is here to stay for a while!",
+                                   by: "Owen Hanson",
+                                   date: "May 23, 2019",
+                                   desc: "OOOOOOoooooooof.",
+                                   link: "https://www.youtube.com/watch?v=TdSBXtiuNYc"}, true),
+                         
+                         
+                         
+                         
                          
                          /* unofficial starts now. Index is currently 35.*/
+                         
+                         
+                         
+                         
                          
                          new Node({name: "Sweet dreams with kahoot theme, fixed tempo & Jokers gun & tainted love & etc i put bona-petite",
                                    by: "Kªkº",
