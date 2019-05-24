@@ -401,7 +401,7 @@ function setup() {
                          
                          
                          
-                         /* unofficial starts now. Index is currently 35.*/
+                         /* unofficial starts now. Index is currently 36.*/
                          
                          
                          
@@ -544,9 +544,13 @@ function setup() {
                                    link: "https://www.youtube.com/watch?v=NdSW5LQbAAA"}) // 61
                         ]); // please ACTUALLY define mainTree here once everything works
     //                      35, 36,37,38, 39, 40, 41,42,43, 44, 45, 46, 47, 48,49, 50, 51, 52,53,54, 55, 56, 57, 58, 59,60,61
-    var unofficialParents = [5, 35, 2, 1, 25, 29, 29, 1, 5, 43, 44, 45, 44, 44, 5, 49, 50, 44, 6, 5, 54, 44, 44, 57, 57, 2, 2];
+    var unofficialParents = [5, -36, 2, 1, 25, 29, 29, 1, 5, -18, -17, -16, -17, -17, 5, -12, -11, -17, 6, 5, -7, -17, -17, -4, -4, 2, 2];
     for(var i = 0; i < unofficialParents.length; i++) {
-      mainTree.nodes[mainTree.nodes.length + ((-1 * unofficialParents.length) + i)].par = mainTree.nodes[unofficialParents[i]];
+      if(unofficialParents[i] > 0) {
+        mainTree.nodes[mainTree.nodes.length + ((-1 * unofficialParents.length) + i)].par = mainTree.nodes[unofficialParents[i]];
+      } else {
+        mainTree.nodes[mainTree.nodes.length + ((-1 * unofficialParents.length) + i)].par = mainTree.nodes[mainTree.nodes.length + unofficialParents[i]];
+      }
     }
     
     for(var i = 0; i < mainTree.nodes.length; i++) {
