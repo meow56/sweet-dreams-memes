@@ -543,14 +543,44 @@ function setup() {
                                    desc: "Lonely smug dancin'.",
                                    link: "https://www.youtube.com/watch?v=NdSW5LQbAAA"}) // 61
                         ]); // please ACTUALLY define mainTree here once everything works
-    //                      35, 36,37,38, 39, 40, 41,42,43, 44, 45, 46, 47, 48,49, 50, 51, 52,53,54, 55, 56, 57, 58, 59,60,61
-    var unofficialParents = [5, -36, 2, 1, 25, 29, 29, 1, 5, -18, -17, -16, -17, -17, 5, -12, -11, -17, 6, 5, -7, -17, -17, -4, -4, 2, 2];
-    for(var i = 0; i < unofficialParents.length; i++) {
-      if(unofficialParents[i] > 0) {
-        mainTree.nodes[mainTree.nodes.length + ((-1 * unofficialParents.length) + i)].par = mainTree.nodes[unofficialParents[i]];
-      } else {
-        mainTree.nodes[mainTree.nodes.length + ((-1 * unofficialParents.length) + i)].par = mainTree.nodes[mainTree.nodes.length + unofficialParents[i]];
+    function findIndex(name) {
+      for(var i = 0; i < mainTree.nodes.length; i++) {
+        if(name === mainTree.nodes[i].meta.name) {
+          return i;
+        }
       }
+    }
+    var unofficialParents = [
+                             5, 
+                             mainTree.nodes.length - findIndex("Sweet dreams with kahoot theme, fixed tempo & Jokers gun & tainted love & etc i put bona-petite"), 
+                             2, 
+                             1, 
+                             25, 
+                             29, 
+                             29, 
+                             1, 
+                             5, 
+                             mainTree.nodes.length - findIndex("sweet dreams but with kahoot music over it,crab rave,tainted love,men at work and my previous crap"), 
+                             mainTree.nodes.length - findIndex("Sweet Dreams but please read the description (ft. Hatsune miku)"), 
+                             mainTree.nodes.length - findIndex("Sweet Dreams but please read the description (ft. Hatsune miku) But I added the Pelones"), 
+                             mainTree.nodes.length - findIndex("Sweet Dreams but please read the description (ft. Hatsune miku)"), 
+                             mainTree.nodes.length - findIndex("Sweet Dreams but please read the description (ft. Hatsune miku)"), 
+                             5, 
+                             mainTree.nodes.length - findIndex("sweet dreams kahoot theme, Jokers gun, TL clap & the crab rave shaker but I added a creeper"), 
+                             mainTree.nodes.length - findIndex("sweet dreams kahoot, jokers gun, TL clap, crab rave, creeper and oof but i added the game cube sound"), 
+                             mainTree.nodes.length - findIndex("Sweet Dreams but please read the description (ft. Hatsune miku)"), 
+                             6, 
+                             5, 
+                             mainTree.nodes.length - findIndex("sweet dreams with the kahoot theme ft. an otamatone but read the desc."), 
+                             mainTree.nodes.length - findIndex("Sweet Dreams but please read the description (ft. Hatsune miku)"), 
+                             mainTree.nodes.length - findIndex("Sweet Dreams but please read the description (ft. Hatsune miku)"), 
+                             mainTree.nodes.length - findIndex("Sweet Dreams But Only The Description Can Express The Insanity At Work"), 
+                             mainTree.nodes.length - findIndex("Sweet Dreams But Only The Description Can Express The Insanity At Work"), 
+                             2, 
+                             2
+                            ];
+    for(var i = 0; i < unofficialParents.length; i++) {
+      mainTree.nodes[mainTree.nodes.length + ((-1 * unofficialParents.length) + i)].par = mainTree.nodes[unofficialParents[i]];
     }
     
     for(var i = 0; i < mainTree.nodes.length; i++) {
