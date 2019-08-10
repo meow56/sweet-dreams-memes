@@ -466,7 +466,7 @@ function setup() {
                          
                          
                          
-                         /* unofficial starts now. Index is currently 41.*/
+                         /* unofficial starts now. Index is currently 51.*/
                          
                          
                          
@@ -476,137 +476,147 @@ function setup() {
                                    by: "Kªkº",
                                    date: "May 8, 2019",
                                    desc: "They're from My Singing Monsters.",
-                                   link: "https://www.youtube.com/watch?v=DnhwnPDfP88"}), // 35
+                                   link: "https://www.youtube.com/watch?v=DnhwnPDfP88"}), // 52
                          new Node({name: "sweet dreams with kahoot theme, Jokers gun, tainted love, etc but I added the We Will Rock You beat",
                                    by: "Brendan Head",
                                    date: "May 9, 2019",
                                    desc: "We will we will rock you.",
-                                   link: "https://www.youtube.com/watch?v=nD5tcrnopj8"}), // 36
+                                   link: "https://www.youtube.com/watch?v=nD5tcrnopj8"}), // 53
                          new Node({name: "\"\"sweet dreams but i put kahoot music over it\" but I fixed the tempo\" but i added lyrics",
                                    by: "Shirafriend",
                                    date: "May 3, 2019",
                                    desc: "Lyrics!",
-                                   link: "https://www.youtube.com/watch?v=2Mmbxb-wavM"}), // 37
+                                   link: "https://www.youtube.com/watch?v=2Mmbxb-wavM"}), // 54
                          new Node({name: "\"sweet dreams but i put kahoot music over it\" but it's going too fast with relaxing noises",
                                    by: "VIVAS-TRAP",
                                    date: "May 5, 2019",
                                    desc: "Just calm down :)",
-                                   link: "https://www.youtube.com/watch?v=a5QODegIPa8"}), // 38
+                                   link: "https://www.youtube.com/watch?v=a5QODegIPa8"}), // 55
                          new Node({name: "Sweet Dreams Kahoot but Etika has a mental breakdown",
                                    by: "Lobster_",
                                    date: "May 15, 2019",
                                    desc: "OH MY GOOOOD!!!!",
-                                   link: "https://www.youtube.com/watch?v=IIKhv1q2dJc"}), // 39
+                                   link: "https://www.youtube.com/watch?v=IIKhv1q2dJc"}), // 56
                          new Node({name: "sweet dreams with kahoot music, but as a ytpmv recreation (unofficial)",
                                    by: "Katu-Jan",
                                    date: "May 15, 2019",
                                    desc: "How to get 10000000000000 billion points in Kahoot!!!",
-                                   link: "https://www.youtube.com/watch?v=h6FQPZ-gvlY"}), // 40
+                                   link: "https://www.youtube.com/watch?v=h6FQPZ-gvlY"}), // 57
                          new Node({name: "Sweet Dreams Kahoot: Genesis",
                                    by: "Lobster_",
                                    date: "May 17, 2019",
                                    desc: "...Parent is from last avatar shown.",
-                                   link: "https://www.youtube.com/watch?v=AfymBKBKEzc"}), // 41
+                                   link: "https://www.youtube.com/watch?v=AfymBKBKEzc"}), // 58
                          new Node({name: "Sweet Dreams and Kahoot Music sounds SO GOOD Together!",
                                    by: "Amosdoll Music",
                                    date: "May 11, 2019",
                                    desc: "Nice.",
-                                   link: "https://www.youtube.com/watch?v=vMddc1xlMzo"}), // 42
+                                   link: "https://www.youtube.com/watch?v=vMddc1xlMzo"}), // 59
                          new Node({name: "sweet dreams but with kahoot music over it,crab rave,tainted love,men at work and my previous crap",
                                    by: "theonlycatonice",
                                    date: "May 10, 2019",
                                    desc: "Lots of stuff. Also, *slap*",
-                                   link: "https://www.youtube.com/watch?v=XMZ7xAhzC0g"}), // 43
+                                   link: "https://www.youtube.com/watch?v=XMZ7xAhzC0g"}), // 60
                          new Node({name: "Sweet Dreams but please read the description (ft. Hatsune miku)",
                                    by: "LesManga Musique",
                                    date: "May 11, 2019",
                                    desc: "Please, read the description.",
-                                   link: "https://www.youtube.com/watch?v=vKyrGfcqEIM"}), // 44
+                                   link: "https://www.youtube.com/watch?v=vKyrGfcqEIM"}), // 61
                          new Node({name: "Sweet Dreams but please read the description (ft. Hatsune miku) But I added the Pelones",
                                    by: "Loch Ness from Earthbound",
                                    date: "May 13, 2019",
                                    desc: "Violin Pelone.",
-                                   link: "https://www.youtube.com/watch?v=sA-NWQkuyAk"}), // 45
+                                   link: "https://www.youtube.com/watch?v=sA-NWQkuyAk"}), // 62
                          new Node({name: "Sweet Dreams with Kahoot music but read the discription",
                                    by: "Eileen Gamer Girl",
                                    date: "May 17, 2019",
                                    desc: "Dancin' (Kirby).",
-                                   link: "https://www.youtube.com/watch?v=jiW03Z8Tx6M "}), // 46
+                                   link: "https://www.youtube.com/watch?v=jiW03Z8Tx6M "}), // 63
                          new Node({name: "Sweet Dreams but I beg you, read the description",
                                    by: "Athali",
                                    date: "May 16, 2019",
                                    desc: "All aboard.",
-                                   link: "https://www.youtube.com/watch?v=WhsAabTDhUI"}), // 47
+                                   link: "https://www.youtube.com/watch?v=WhsAabTDhUI"}), // 64
                          new Node({name: "Sweet dreams but read the description really hard",
                                    by: "TheJosiahTurner",
                                    date: "May 16, 2019",
                                    desc: "Hats?",
-                                   link: "https://www.youtube.com/watch?v=Z9LIfs3-WBQ"}), // 48
+                                   link: "https://www.youtube.com/watch?v=Z9LIfs3-WBQ"}), // 65
                          new Node({name: "sweet dreams kahoot theme, Jokers gun, TL clap & the crab rave shaker but I added a creeper",
                                    by: "Squiggly",
                                    date: "May 8, 2019",
                                    desc: "ssssss....",
-                                   link: "https://www.youtube.com/watch?v=WwaP3rlwYQM"}), // 49
+                                   link: "https://www.youtube.com/watch?v=WwaP3rlwYQM"}), // 66
                          new Node({name: "sweet dreams kahoot theme, Jokers gun, TL clap, crab rave shaker & creeper but with 100% more OOF",
                                    by: "Data Wireframe",
                                    date: "May 10, 2019",
                                    desc: "This meme is going to OOF itself.",
-                                   link: "https://www.youtube.com/watch?v=rwCiqWYKLU4"}), // 50
+                                   link: "https://www.youtube.com/watch?v=rwCiqWYKLU4"}), // 67
                          new Node({name: "sweet dreams kahoot, jokers gun, TL clap, crab rave, creeper and oof but i added the game cube sound",
                                    by: "MinoesTrashRat",
                                    date: "May 11, 2019",
                                    desc: "Starting up...",
-                                   link: "https://www.youtube.com/watch?v=x4jUgaHjtvs"}), // 51
+                                   link: "https://www.youtube.com/watch?v=x4jUgaHjtvs"}), // 68
                          new Node({name: "Sweet dreams but oh my god what have i done (check the description)",
                                    by: "StardustLegend - TheFirstNoel",
                                    date: "May 15, 2019",
                                    desc: "The last thing you want in your burger is Space Jam.",
-                                   link: "https://www.youtube.com/watch?v=-vUERdlRA_U"}), // 52
+                                   link: "https://www.youtube.com/watch?v=-vUERdlRA_U"}), // 69
                          new Node({name: "sweet dreams & kahoot theme & gun & clap & crab rave & hawaii five-o drums & I added door head hit",
                                    by: "itor",
                                    date: "May 11, 2019",
                                    desc: "Ouch.",
-                                   link: "https://www.youtube.com/watch?v=C1SNCpDizdA"}), // 53
+                                   link: "https://www.youtube.com/watch?v=C1SNCpDizdA"}), // 70
                          new Node({name: "sweet dreams with the kahoot theme ft. an otamatone but read the desc.",
                                    by: "SHIROKAMI",
                                    date: "May 8, 2019",
                                    desc: "Audio itself came from TheRealSullyG.",
-                                   link: "https://www.youtube.com/watch?v=nEZEv90qQRc"}), // 54
+                                   link: "https://www.youtube.com/watch?v=nEZEv90qQRc"}), // 71
                          new Node({name: "sweet dreams, kahoot, joker, tainted love, crab rave, and otamatone PLUS squidward's sculpture",
                                    by: "Cheesy Hfj",
                                    date: "May 11, 2019",
                                    desc: "RIP Squidward.",
-                                   link: "https://www.youtube.com/watch?v=Va3mJUTMP94"}), // 55
+                                   link: "https://www.youtube.com/watch?v=Va3mJUTMP94"}), // 72
                          new Node({name: "Sweet Dreams but Read the Description",
                                    by: "The guy across the street",
                                    date: "May 17, 2019",
                                    desc: "It's a merger. It's really something.",
-                                   link: "https://www.youtube.com/watch?v=3tPhBBjUMJc"}), // 56
+                                   link: "https://www.youtube.com/watch?v=3tPhBBjUMJc"}), // 73
                          new Node({name: "Sweet Dreams But Only The Description Can Express The Insanity At Work",
                                    by: "Karuu",
                                    date: "May 15, 2019",
                                    desc: "Harder, Better, Faster, Stronger.",
-                                   link: "https://www.youtube.com/watch?v=8VQrkCCGoZQ"}), // 57
+                                   link: "https://www.youtube.com/watch?v=8VQrkCCGoZQ"}), // 74
                          new Node({name: "Sweet Dreams but we need to go deeper",
                                    by: "Audioshake",
                                    date: "May 15, 2019",
                                    desc: "Brainiac Maniac is the song added.",
-                                   link: "https://www.youtube.com/watch?v=SL_tgSO5Jgo"}), // 58
+                                   link: "https://www.youtube.com/watch?v=SL_tgSO5Jgo"}), // 75
                          new Node({name: "Sweet Dreams But I Made It ♂The♂Right♂Version♂",
                                    by: "JoeCrapsArt",
                                    date: "May 19, 2019",
                                    desc: "From Gachimuchi. The MEME, not the GAME. I hope.",
-                                   link: "https://www.youtube.com/watch?v=ipqDq0kfnc8"}), // 59
+                                   link: "https://www.youtube.com/watch?v=ipqDq0kfnc8"}), // 76
                          new Node({name: "sweet dreams but i put kahoot music over it but I fixed the tempo but the rest is in the description",
                                    by: "Crash Schwarzenegger",
                                    date: "May 8, 2019",
                                    desc: "Dancin' memefest.",
-                                   link: "https://www.youtube.com/watch?v=hK-vpj7E9O8"}), // 60
+                                   link: "https://www.youtube.com/watch?v=hK-vpj7E9O8"}), // 77
                          new Node({name: "Sweet Dreams but i put kahoot music over it but I fixed the tempo but I put in Smug dancing Hat kid",
                                    by: "Crash Schwarzenegger",
                                    date: "May 7, 2019",
                                    desc: "Lonely smug dancin'.",
-                                   link: "https://www.youtube.com/watch?v=NdSW5LQbAAA"}) // 61
+                                   link: "https://www.youtube.com/watch?v=NdSW5LQbAAA"}) // 78
+                         new Node({name: "Sweet Dreams but i put kahoot music over it but I fixed the tempo but I put in Smug dancing Hat kid",
+                                   by: "Crash Schwarzenegger",
+                                   date: "May 7, 2019",
+                                   desc: "Lonely smug dancin'.",
+                                   link: "https://www.youtube.com/watch?v=NdSW5LQbAAA"}) // 79
+                         new Node({name: "sweet dreams with kahoot music, but as a ytpmv recreation (part 2) (unofficial)",
+                                   by: "Katu-Jan",
+                                   date: "July 28, 2019",
+                                   desc: "It's the Season 2 Review.",
+                                   link: "https://www.youtube.com/watch?v=5HhHiaUx5FY"}) // 80
                         ]); // please ACTUALLY define mainTree here once everything works
     function findIndex(name) {
       for(var i = 0; i < mainTree.nodes.length; i++) {
@@ -642,7 +652,8 @@ function setup() {
                              "Sweet Dreams But Only The Description Can Express The Insanity At Work", 
                              "Sweet Dreams But Only The Description Can Express The Insanity At Work", 
                              2, 
-                             2
+                             2,
+                             45
                             ];
     for(var i = 0; i < unofficialParents.length; i++) {
       if(Number.isInteger(unofficialParents[i])) {
