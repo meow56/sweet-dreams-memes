@@ -681,7 +681,7 @@ function setup() {
     var gen3Rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     gen3Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
     gen3Rect.setAttributeNS(null, "height", "" + ((100 * genY + 2 * nodeRadius) / 4));
-    gen3Rect.setAttributeNS(null, "y", "" + (((100 * genY + 2 * nodeRadius) / 2) + genY));
+    gen3Rect.setAttributeNS(null, "y", "" + (((100 * genY + 2 * nodeRadius) / 2))); // I had originally assumed that season 2's snap would be gen 51; this was not the case.
     gen3Rect.setAttributeNS(null, "fill", "#fec009");
     var gen4Rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     gen4Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
@@ -708,7 +708,7 @@ function setup() {
     season3Text.setAttributeNS(null, "text-anchor", "end");
     season3Text.style.fontSize = "40px";
     season3Text.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - 17));
-    season3Text.setAttributeNS(null, "y", "" + (51 * genY + yOffset + nodeRadius + 30));
+    season3Text.setAttributeNS(null, "y", "" + (50 * genY + yOffset + nodeRadius + 30));
     season3Text.textContent = "Season 3";
     var season4Text = document.createElementNS("http://www.w3.org/2000/svg", "text");
     season4Text.setAttributeNS(null, "text-anchor", "end");
