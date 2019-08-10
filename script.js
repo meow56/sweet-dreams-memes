@@ -1,13 +1,3 @@
-/*
-First off:
-how do tree
-  create object class node with parent
-
-Second:
-how do display
-  abuse border-radius
-*/
-
 var xOffset = 10; // how far to the right the first node is
 var yOffset = 10; // how far down the first node is
 var nodeRadius = 20; // the radius of each node, also used to determine the margins of the svg
@@ -396,12 +386,87 @@ function setup() {
                                    date: "May 23, 2019",
                                    desc: "OOOOOOoooooooof.",
                                    link: "https://www.youtube.com/watch?v=TdSBXtiuNYc"}, true),
+                         new Node({name: "(Gen 36) Sweet Dreams But Kahoot, but Bob Ross is beating the devil out it",
+                                   by: "Shrekles",
+                                   date: "May 26, 2019",
+                                   desc: "Happy little WACK",
+                                   link: "https://www.youtube.com/watch?v=QnwLzVSfCJc"}, true),
+                         new Node({name: "(Gen 37) Kahoot Sweet Dreams, but with Xylophone",
+                                   by: "Everything Feline",
+                                   date: "May 28, 2019",
+                                   desc: "BEEP BEEP BEEP BE- \"I'M DEFUSING A BOMB, SHUT UP\"",
+                                   link: "https://www.youtube.com/watch?v=tDhqR1Je_zc"}, true),
+                         new Node({name: "sweet dreams kahoot but there's more cowbell",
+                                   by: "A Human/imheretoo",
+                                   date: "???",
+                                   desc: "More cowbell, with the added mystique of unknown dates! (The author deleted their channel)",
+                                   link: "https://www.youtube.com/watch?v=JDV6TZW6AEc"}, true),
+                         new Node({name: "(Gen 39) Sweet Dreams but the timelines merge ft everyone (& Miku)",
+                                   by: "LesManga Musique",
+                                   date: "June 6, 2019",
+                                   desc: "An unofficial made official.",
+                                   link: "https://www.youtube.com/watch?v=owcEFkXTWHI"}, true),
+                         new Node({name: "Sweet Dreams Kahoot [Gen40] but Lobster & I remastered Season 1 & added background dancers",
+                                   by: "UnderMineBlox & Lobster",
+                                   date: "June 7, 2019",
+                                   desc: "A collaboration to fix what once was wrong.",
+                                   link: "https://www.youtube.com/watch?v=K1u66y8-kwg"}, true),
+                         new Node({name: "Sweet Dreams Kahoot but there’s Dancin' then Pendulum and Minecraft Creeper join in to play [Gen 41]",
+                                   by: "DaymanOurSavior",
+                                   date: "June 12, 2019",
+                                   desc: "Woah, a famous person. Also official Dancin'.",
+                                   link: "https://www.youtube.com/watch?v=QY-ijEgVU4s"}, true),
+                         new Node({name: "(Gen 42) Sweet Dreams but it’s the answer to life, the universe, and everything &My Singing Monsters",
+                                   by: "PieMan12",
+                                   date: "June 15, 2019",
+                                   desc: "Hey, it's a magic number. And also monsters singing. (with cool lights)",
+                                   link: "https://www.youtube.com/watch?v=mETmN4BMed0"}, true),
+                         new Node({name: "Sweet Dreams Kahoot but Keanu Reeves, Soulja Boy, and more join the battle. (Gen 43)",
+                                   by: "Mix N Mash",
+                                   date: "June 19, 2019",
+                                   desc: "You're breathtaking!",
+                                   link: "https://www.youtube.com/watch?v=Jl5qMI3mXqc"}, true),
+                         new Node({name: "sweet dreams but i added kitchen gun & don’t mine at night (Gen 44)",
+                                   by: "Velamy",
+                                   date: "June 29, 2019",
+                                   desc: "New viewers will say: \"I'm scared... oh well.\" Or maybe just \"I'm scared.\"",
+                                   link: "https://www.youtube.com/watch?v=LG_eLZGDVX0"}, true),
+                         new Node({name: "Sweet Dreams but Eleanor Forte, Pingu, Billie Eilish and Miles Morales join in + more (Gen 45)",
+                                   by: "StardustLegend",
+                                   date: "July 5, 2019",
+                                   desc: "Another virtual singer joins the fray.",
+                                   link: "https://www.youtube.com/watch?v=m4zLjgfd71Q"}, true),
+                         new Node({name: "(Gen 46) Sweet Dreams Kahoot but it has more JoJo",
+                                   by: "Kubabuba3",
+                                   date: "July 11, 2019",
+                                   desc: "Uhhh, muda muda or whatever? Look, I haven't watched Jojo yet.",
+                                   link: "https://www.youtube.com/watch?v=UdrYjmlB9K8"}, true),
+                         new Node({name: "Sweet Dreams Kahoot gen 47 but It's-a Mario Time (Wahoo!)",
+                                   by: "Cloud the Ampharos",
+                                   date: "July 16, 2019",
+                                   desc: "I guess Cloud here got a 1-up or something, to be here again.",
+                                   link: "https://www.youtube.com/watch?v=2jDrUzYsFU0"}, true),
+                         new Node({name: "Kahoot Sweet Dreams but it's Buddy's Bizzare Adventure ft. Kokichi Oma and Banjo Kazooie",
+                                   by: "LackedRoom140",
+                                   date: "July 20, 2019",
+                                   desc: "A totally new person made this gen... That was just a lie! AHAHAHAHAHA!",
+                                   link: "https://www.youtube.com/watch?v=-bm2Hfsp_Z8"}, true),
+                         new Node({name: "SDK [{Gen 49}] the Nazareth zombies are coming In the snow",
+                                   by: "Ganar_2000",
+                                   date: "Aug 4, 2019",
+                                   desc: "Oh, Plants vs. Zombies, huh? ...Wait. Do I hear...Snow Halation???",
+                                   link: "https://www.youtube.com/watch?v=TYWO9mFCL40"}, true),
+                         new Node({name: "SD̡K [Ge̵n͠ 5̨0]͢ ͞bu͏t̢ ͠{A fatal exception 0E has occured at 0028:C562F1B7 in VXD ctpci9x(05)}",
+                                   by: "Everything Feline",
+                                   date: "Aug 8, 2019",
+                                   desc: "Hmm, maybe I shouldn't've downloaded \"FREE Kahoot HACK111 INFINITE PoINTS11111.exe\"...",
+                                   link: "https://www.youtube.com/watch?v=KCYbLTQ2dVo"}, true),
                          
                          
                          
                          
                          
-                         /* unofficial starts now. Index is currently 36.*/
+                         /* unofficial starts now. Index is currently 41.*/
                          
                          
                          
@@ -667,8 +732,15 @@ function setup() {
     season2Logo.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - 17 - season2Logo.getAttributeNS(null, "width")));
     season2Logo.setAttributeNS(null, "y", "" + (26 * genY + yOffset + nodeRadius + 30));
     season2Logo.setAttributeNS(null, "href", "images/season2.png");
+    var season3Logo = document.createElementNS("http://www.w3.org/2000/svg", "image");
+    season3Logo.setAttributeNS(null, "height", "" + genY / 2);
+    season3Logo.setAttributeNS(null, "width", "" + (1280 * genY / 2 / 720));
+    season3Logo.setAttributeNS(null, "x", "" + (svg.getAttributeNS(null, "width") - 17 - season3Logo.getAttributeNS(null, "width")));
+    season3Logo.setAttributeNS(null, "y", "" + (50 * genY + yOffset + nodeRadius + 30));
+    season3Logo.setAttributeNS(null, "href", "images/season3.png");
     svg.appendChild(season1Logo);
     svg.appendChild(season2Logo);
+    svg.appendChild(season3Logo);
     for(var i = 0; i < highGen + 1; i++) {
       var newLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
       newLine.setAttributeNS(null, "x1", "0");
