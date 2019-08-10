@@ -47,7 +47,7 @@ function Node(metadata, official) {
       nodeSymbol.setAttributeNS(null, "id", this.meta.name);
       nodeSymbol.setAttributeNS(null, "points", this.x + "," + (this.y - nodeRadius) + " " + (this.x + (nodeRadius * Math.sqrt(3) / 2)) + "," + (this.y + (nodeRadius / 2)) + " " + (this.x - (nodeRadius * Math.sqrt(3) / 2)) + "," + (this.y + (nodeRadius / 2)));
       nodeSymbol.setAttributeNS(null, "fill", "white");
-    } else if(this.gen <= 50) {
+    } else if(this.gen <= 49) {
       // diamond
       var nodeSymbol = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
       nodeSymbol.setAttributeNS(null, "id", this.meta.name);
@@ -681,7 +681,7 @@ function setup() {
     var gen3Rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     gen3Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
     gen3Rect.setAttributeNS(null, "height", "" + ((100 * genY + 2 * nodeRadius) / 4));
-    gen3Rect.setAttributeNS(null, "y", "" + (((100 * genY + 2 * nodeRadius) / 2))); // I had originally assumed that season 2's snap would be gen 51; this was not the case.
+    gen3Rect.setAttributeNS(null, "y", "" + (((100 * genY + 2 * nodeRadius) / 2) - yOffset)); // I had originally assumed that season 2's snap would be gen 51; this was not the case. No idea why I need to subtract yOffset though, which is a bad sign.
     gen3Rect.setAttributeNS(null, "fill", "#fec009");
     var gen4Rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     gen4Rect.setAttributeNS(null, "width", "" + document.getElementById("mainDiv").offsetWidth);
