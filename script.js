@@ -606,12 +606,7 @@ function setup() {
                                    by: "Crash Schwarzenegger",
                                    date: "May 7, 2019",
                                    desc: "Lonely smug dancin'.",
-                                   link: "https://www.youtube.com/watch?v=NdSW5LQbAAA"}) // 78
-                         new Node({name: "Sweet Dreams but i put kahoot music over it but I fixed the tempo but I put in Smug dancing Hat kid",
-                                   by: "Crash Schwarzenegger",
-                                   date: "May 7, 2019",
-                                   desc: "Lonely smug dancin'.",
-                                   link: "https://www.youtube.com/watch?v=NdSW5LQbAAA"}) // 79
+                                   link: "https://www.youtube.com/watch?v=NdSW5LQbAAA"}), // 78
                          new Node({name: "sweet dreams with kahoot music, but as a ytpmv recreation (part 2) (unofficial)",
                                    by: "Katu-Jan",
                                    date: "July 28, 2019",
