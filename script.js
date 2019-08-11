@@ -461,12 +461,17 @@ function setup() {
                                    date: "Aug 8, 2019",
                                    desc: "Hmm, maybe I shouldn't've downloaded \"FREE Kahoot HACK111 INFINITE PoINTS11111.exe\"...",
                                    link: "https://www.youtube.com/watch?v=KCYbLTQ2dVo"}, true),
+                         new Node({name: "(Gen 51) Sweet Dreams Kahoot but Donald Trump is a bad maestro",
+                                   by: "Kaptein 'merica",
+                                   date: "Aug 10, 2019",
+                                   desc: "I'm pretty sure conductors have batons...",
+                                   link: "https://www.youtube.com/watch?v=gwMJD1McIP8"}, true),
                          
                          
                          
                          
                          
-                         /* unofficial starts now. Index is currently 51.*/
+                         /* unofficial starts now. Index is currently 52?*/
                          
                          
                          
